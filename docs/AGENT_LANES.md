@@ -8,6 +8,46 @@ Two later blocks (Integration, Lane E, Audit) are here too; start them when thei
 
 ---
 
+## Running this in Conductor
+
+Conductor gives each session its own git worktree under
+`~/conductor/workspaces/agent-harness/<name>`. All of them share one clone, so anything merged to
+`main` appears in every workspace created afterwards. That is why `docs/` is committed: no lane
+needs to be handed this file, it is already sitting in the worktree.
+
+**The order matters more than anything else here.** Do not create the lane workspaces until Phase 0
+is merged, or they will branch from a `main` with no scaffold in it.
+
+1. **Phase 0.** One workspace. Paste:
+   > Read `docs/CONDUCTOR_KICKOFF.md` and follow it exactly. Build Phase 0 only, then stop and give
+   > me the handoff paragraph it asks for.
+
+   When it finishes, merge that workspace to `main`.
+
+2. **The four lanes.** Create four workspaces, named `lane-a-compiler`, `lane-b-judge`,
+   `lane-c-fixtures`, `lane-d-scoring`. In each one paste three lines, changing only the lane name:
+   > Read `docs/CONTRACTS.md`, `docs/ROADMAP.md`, and `docs/AGENT_LANES.md`.
+   > You are **Lane A**. Follow your lane block in `AGENT_LANES.md` exactly.
+   > Do not edit any file you do not own in the ownership matrix. Every commit gets the
+   > `Conductor-Lane:` trailer.
+
+   Start all four, then leave them alone. They do not need each other.
+
+3. **Integration.** When all four are done, merge them to `main` in the order A, B, C, D, then run
+   the Integration block in one workspace off updated `main`.
+
+4. **The human gate.** Integration hands you the review sheet. Start Lane E in its own workspace so
+   an agent is working while you label.
+
+5. **Close.** Phase 7, then the audit.
+
+Four Claude Code sessions running at once consume roughly four times the quota of one, and Phase 0's
+model cache only covers the project's own API calls, not the agents themselves. If you are rate
+limited, run A and B first, then C and D: the ownership matrix means the split costs correctness
+nothing, only wall clock.
+
+---
+
 ## File ownership matrix
 
 Exclusive write access. **Editing a file you do not own is the one unrecoverable mistake in this
@@ -49,7 +89,7 @@ need a live key, your lane is not done.
 
 ## Lane A: rule compiler and deterministic checks
 
-> **Lane id: `lane-a-compiler`. Branch: `lane/a-compiler`.**
+> **Lane id: `lane-a-compiler`. Create a Conductor workspace named `lane-a-compiler`; whatever branch Conductor gives it is fine, the commit trailer is what identifies your work.**
 >
 > Read `docs/CONTRACTS.md` and `docs/ROADMAP.md` (Phase 1) first. You own exactly:
 > `src/compile.py`, `src/rules.py`, `tests/test_compile.py`, `tests/test_deterministic_rules.py`.
@@ -90,7 +130,7 @@ need a live key, your lane is not done.
 
 ## Lane B: semantic judge, checker, repair
 
-> **Lane id: `lane-b-judge`. Branch: `lane/b-judge`.**
+> **Lane id: `lane-b-judge`. Create a Conductor workspace named `lane-b-judge`; whatever branch Conductor gives it is fine, the commit trailer is what identifies your work.**
 >
 > Read `docs/CONTRACTS.md` and `docs/ROADMAP.md` (Phase 2) first. You own exactly:
 > `src/semantic_check.py`, `src/checker.py`, `src/repair.py`, `tests/test_semantic_check.py`,
@@ -131,7 +171,7 @@ need a live key, your lane is not done.
 
 ## Lane C: adversarial fixtures, blind labeling, review tooling
 
-> **Lane id: `lane-c-fixtures`. Branch: `lane/c-fixtures`.**
+> **Lane id: `lane-c-fixtures`. Create a Conductor workspace named `lane-c-fixtures`; whatever branch Conductor gives it is fine, the commit trailer is what identifies your work.**
 >
 > Read `docs/CONTRACTS.md` and `docs/ROADMAP.md` (Phase 3) first. You own exactly:
 > `src/fixtures.py`, `src/labeler.py`, `src/review_tool.py`, `fixtures/emails.json`,
@@ -185,7 +225,7 @@ need a live key, your lane is not done.
 
 ## Lane D: scoring and surface
 
-> **Lane id: `lane-d-scoring`. Branch: `lane/d-scoring`.**
+> **Lane id: `lane-d-scoring`. Create a Conductor workspace named `lane-d-scoring`; whatever branch Conductor gives it is fine, the commit trailer is what identifies your work.**
 >
 > Read `docs/CONTRACTS.md` and `docs/ROADMAP.md` (Phase 4) first. You own exactly:
 > `src/score.py`, `src/cli.py`, `tests/test_score.py`, and the example
@@ -237,7 +277,7 @@ need a live key, your lane is not done.
 
 ## Integration: merge, `grader.py`, first real batch
 
-> **Lane id: `phase-5-integration`. Branch: `main`.**
+> **Lane id: `phase-5-integration`. Run this in the Phase 0 workspace after the lanes have merged, or a fresh workspace off updated `main`.**
 >
 > Lanes A–D are merged in that order, each rebased on `main` before merging. Ownership was disjoint,
 > so conflicts should be nil; if you hit one, Phase 0 under-specified a shared file, and the fix goes
@@ -261,7 +301,7 @@ need a live key, your lane is not done.
 
 ## Lane E: polish, runs concurrently with the human labeling gate
 
-> **Lane id: `lane-e-polish`. Branch: `lane/e-polish`.**
+> **Lane id: `lane-e-polish`. Create a Conductor workspace named `lane-e-polish`; whatever branch Conductor gives it is fine, the commit trailer is what identifies your work.**
 >
 > Start this when the human labeling gate starts, so an agent is doing useful work during those two
 > hours. You own: the top-level `README.md`, `.github/workflows/`, `docs/CONDUCTOR_LOG.md`,
@@ -287,7 +327,7 @@ need a live key, your lane is not done.
 
 ## Phase 7: final numbers and the record
 
-> **Lane id: `phase-7-final`. Branch: `main`.**
+> **Lane id: `phase-7-final`. Run this in the integration workspace, off updated `main`.**
 >
 > Starts when the human hands back `labels_ground_truth.json`. You own `src/score.py` outputs, the
 > example README, and `docs/CONDUCTOR_LOG.md`'s prose sections.
