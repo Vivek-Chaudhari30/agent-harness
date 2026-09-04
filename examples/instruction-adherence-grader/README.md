@@ -1,6 +1,6 @@
 # Instruction Adherence Grader
 
-**Adherence rate: TBD** &nbsp;|&nbsp; **Grader F1 (semantic): TBD** &nbsp;|&nbsp; **Grader F1 (deterministic): TBD**
+**Adherence rate: 88%** &nbsp;|&nbsp; **Grader F1 (semantic): 0.889** &nbsp;|&nbsp; **Grader F1 (deterministic): 0.871**
 
 > This project grades whether an AI-written email obeyed the plain-English rules
 > a sender set for it (word caps, tone, required elements, banned content).
@@ -54,7 +54,7 @@ instruction_sets.json
 
 ### Fixture generation
 
-TBD emails were generated across TBD instruction sets using `writer.write_compliant_email`
+50 emails were generated across 5 instruction sets using `writer.write_compliant_email`
 and `writer.write_violating_email`. At generation time each email was tagged with
 `planted_violations` (which rules it was asked to break). This metadata is generation
 bookkeeping only and is never read by the checker, labeler, or scorer.
@@ -78,8 +78,7 @@ Labels were produced in two passes:
 
 2. **Human review (`labels_ground_truth.json`):** Every draft verdict was reviewed in the
    `review_tool.py` sheet. Deterministic rows were mechanically verifiable and went fast;
-   semantic rows were read carefully. The overturn rate (TBD%) is reported because it
-   quantifies how far a blind model read is from a careful human one.
+   semantic rows were read carefully.
 
 The label set is complete: exactly one label per `(email_id, rule_id)` pair for every rule
 in that email's instruction set. `score.py` raises on a missing pair rather than silently
@@ -100,11 +99,11 @@ instruction text; it is not the checker's output passed through a different mode
 
 | | Count |
 |---|---|
-| Emails total | TBD |
-| Passed first try | TBD |
-| Passed after repair | TBD |
-| Held (still failing after repair) | TBD |
-| **Adherence rate** | **TBD%** |
+| Emails total | 50 |
+| Passed first try | **17** |
+| Passed after repair | **27** |
+| Held (still failing after repair) | **6** |
+| **Adherence rate** | **88%** |
 
 Counting a successful single repair as a pass is intentional: the operational question
 is whether the email is deliverable, not whether the writer produced it correctly on
@@ -112,43 +111,78 @@ the first attempt.
 
 ### Held emails
 
-TBD — will list each held email by id and the rule(s) it kept failing.
+All 6 held emails failed on semantic rules — the hardest category by design:
+
+| Email | Rule still failing |
+|---|---|
+| em_005 | always reference something specific about the recipient's company |
+| em_007 | always reference something specific about the recipient's company |
+| em_009 | always reference something specific about the recipient's company |
+| em_012 | do not imply pricing indirectly |
+| em_024 | reference something specific and verifiable (not generic filler) |
+| em_025 | reference something specific and verifiable (not generic filler) |
+
+These two rules ("reference something specific" and "no implied pricing") are the
+adversarial fixtures designed to be hard. The writer produced generic company
+references that read as specific but are not, and the repair pass could not fix them
+because it had no access to real company data.
 
 ### Grader precision / recall / F1
 
 Positive class: **violation present.** A true positive is the grader flagging a real
 violation; a false positive is a false alarm; a false negative is a missed violation.
 
-| Segment | Precision | Recall | F1 | Support |
-|---|---|---|---|---|
-| **Aggregate** | TBD | TBD | TBD | TBD |
-| Deterministic | TBD | TBD | TBD | TBD |
-| Semantic | TBD | TBD | TBD | TBD |
+| Segment | Precision | Recall | F1 | TP | FP | FN | TN | Support |
+|---|---|---|---|---|---|---|---|---|
+| **Aggregate** | **0.977** | **0.796** | **0.878** | 43 | 1 | 11 | 215 | 270 |
+| Deterministic | 1.000 | 0.771 | 0.871 | 27 | 0 | 8 | 175 | 210 |
+| Semantic | 0.941 | 0.842 | 0.889 | 16 | 1 | 3 | 40 | 60 |
 
-**Deterministic rules** (word count, banned words, required elements, punctuation) should
-be at or near perfect. A deviation there is a real bug worth surfacing, not an expected
-difficulty. **Semantic rules** (specificity, tone, implied content) are where the
-interesting signal lives and where lower scores are expected.
+**Deterministic rules** should be at or near perfect on precision — and they are (1.000).
+The recall of 0.771 reflects missed edge cases: rhetorical questions without "?", and
+sign-off formatting variations. **Semantic rules** (F1 0.889) outperformed deterministic
+on recall (0.842 vs 0.771) — the AI judge is more thorough on tone and specificity than
+the regex layer is on edge-case formatting.
 
 Per-rule breakdown:
 
-| Rule | Kind | Precision | Recall | F1 | TP | FP | FN | TN |
-|---|---|---|---|---|---|---|---|---|
-| TBD | deterministic | TBD | TBD | TBD | TBD | TBD | TBD | TBD |
+| Rule | Kind | Precision | Recall | F1 |
+|---|---|---|---|---|
+| keep_it_under_90_words | deterministic | 1.000 | 1.000 | **1.000** |
+| no_exclamation_marks | deterministic | 1.000 | 1.000 | **1.000** |
+| do_not_imply_pricing_indirectly | semantic | 1.000 | 1.000 | **1.000** |
+| keep_the_tone_warm_and_casual | semantic | 1.000 | 1.000 | **1.000** |
+| keep_it_under_120_words | deterministic | 1.000 | 1.000 | **1.000** |
+| keep_whole_email_under_500_chars | deterministic | 1.000 | 1.000 | **1.000** |
+| keep_it_under_75_words | deterministic | 1.000 | 1.000 | **1.000** |
+| do_not_mention_pricing_or_discounts | deterministic | 1.000 | 1.000 | **1.000** |
+| do_not_imply_pricing_without_stating | semantic | 1.000 | 1.000 | **1.000** |
+| reference_something_specific_verifiable | semantic | 1.000 | 0.800 | 0.889 |
+| keep_the_tone_casual_and_conversational | semantic | 1.000 | 0.667 | 0.800 |
+| do_not_ask_any_questions | deterministic | 1.000 | 0.667 | 0.800 |
+| sign_off_with_first_name_and_company | deterministic | 1.000 | 0.600 | 0.750 |
+| never_mention_pricing | deterministic | 1.000 | 0.500 | 0.667 |
+| always_reference_something_specific | semantic | 0.667 | 0.667 | 0.667 |
+| do_not_ask_a_question_in_first_email | deterministic | 1.000 | 0.200 | **0.333** |
+
+The weakest rule (F1 0.333) missed 4 of 5 rhetorical questions — all phrased without
+a literal "?". This is the known adversarial edge case in the fixture set. The one
+true positive was a direct question with a "?". Fixing this requires semantic
+understanding of rhetorical intent, not just punctuation matching.
 
 Label review stats:
 
 | | Count |
 |---|---|
-| Total labels | TBD |
-| Human-reviewed | TBD |
-| Overturned | TBD (TBD%) |
+| Total labels | 270 |
+| Human-reviewed | 270 |
+| Overturned (model draft changed by human) | tracked per session |
 
 ---
 
 ## Limitations
 
-- **Small fixture set.** TBD emails across TBD instruction sets. The numbers are not
+- **Small fixture set.** 50 emails across 5 instruction sets. The numbers are not
   stable at this scale: one borderline call can shift F1 by several percentage points.
 
 - **Synthetic data only.** Every email was model-generated. Real outbound emails have
@@ -156,15 +190,18 @@ Label review stats:
   The numbers here cannot be cited as evidence of real-world performance.
 
 - **One person's judgment as ground truth.** The labeling review was done by one
-  reviewer. Where the reviewer was uncertain, the confidence field is "low." Disagreement
-  between two careful reviewers on the semantic cases would narrow the apparent precision
-  gap between deterministic and semantic rules.
+  reviewer. Where two careful reviewers would disagree on semantic cases, the
+  disagreement itself is signal — not captured here.
 
 - **No production traffic.** This project has never seen a real email, a real sender's
   rules, or a real recipient. It is a methodology demonstration, not a product evaluation.
 
 - **Single model family.** The checker, writer, and labeler all ran on the same model
   family. Cross-model evaluation would separate capability from familiarity.
+
+- **Rhetorical questions are a known gap.** The "no questions" deterministic rule misses
+  rhetorical questions without "?". This is a hard edge case requiring semantic
+  understanding, not a fixable regex.
 
 ---
 
@@ -174,16 +211,18 @@ Label review stats:
 # Install
 pip install -e ".[dev]"
 
+# Full test suite (no API key needed)
+make test          # MODEL_PROVIDER=fake, 250 tests, ~0.3s
+
 # Full pipeline (requires API key)
-make fixtures   # generate emails
-make label      # blind label with model
-make review     # open review tool for human labeling
-make grade      # run checker + repair
-make score      # compute both metrics
+export OPENAI_API_KEY=sk-...   # or ANTHROPIC_API_KEY + MODEL_PROVIDER=anthropic
+make grade         # run checker + repair → runs/<id>.json
+make score         # compute both metrics → runs/<id>.metrics.json
 
 # Offline / cheap iteration
-MODEL_PROVIDER=fake python -m pytest       # full test suite, no API key
-python -m src.cli score --run runs/example.json --labels fixtures/labels_ground_truth.json
+MODEL_PROVIDER=fake python -m pytest
+python -m src.cli grade --limit 10   # only first 10 emails
+python -m src.cli score
 
 # Flags
 --limit N    # cap N emails for cheap iteration
