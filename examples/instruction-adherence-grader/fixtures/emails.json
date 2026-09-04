@@ -1,0 +1,990 @@
+{
+  "version": 1,
+  "emails": [
+    {
+      "id": "em_001",
+      "instruction_set_id": "is_01",
+      "recipient_context": {
+        "company": "Acme Robotics",
+        "industry": "industrial automation",
+        "detail": "opened a second assembly line in Ohio last month"
+      },
+      "body": "Hi Acme Robotics team,\n\nSaw the note about your second assembly line opening in Ohio, and getting it running ahead of schedule is no small thing. Most teams standing up a new line end up with three tools that refuse to talk to each other, and the handoffs quietly eat a day a week. We stitch those handoffs together without anyone changing how they already work. I would love to walk you through the short version and hear whether it maps to how your floor actually runs.\n\nTalk soon,\nDev\nFlowstitch",
+      "planted_violations": [],
+      "difficulty": "clean",
+      "generation": {
+        "mode": "compliant",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      },
+      "adversarial_tags": [
+        "near_limit_word_count_under"
+      ]
+    },
+    {
+      "id": "em_002",
+      "instruction_set_id": "is_01",
+      "recipient_context": {
+        "company": "Acme Robotics",
+        "industry": "industrial automation",
+        "detail": "opened a second assembly line in Ohio last month"
+      },
+      "body": "Hi Acme Robotics team,\n\nSaw the note about your second assembly line opening in Ohio, and getting it running ahead of schedule is genuinely no small thing at all. Most teams standing up a brand new line end up with three separate tools that refuse to talk to each other, and the handoffs quietly eat a full day a week. We stitch those handoffs together without anyone changing how they already work today. I would love to walk you through the short version and hear whether it truly maps to how your floor actually runs.\n\nTalk soon,\nDev\nFlowstitch",
+      "planted_violations": [
+        "keep_it_under_90_words_9d71ef"
+      ],
+      "difficulty": "single",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      },
+      "adversarial_tags": [
+        "near_limit_word_count_over"
+      ]
+    },
+    {
+      "id": "em_003",
+      "instruction_set_id": "is_01",
+      "recipient_context": {
+        "company": "Northwind Freight",
+        "industry": "trucking and freight",
+        "detail": "rolled out a driver mobile app this spring"
+      },
+      "body": "Hi Northwind Freight team,\n\nYou might be wondering how a driver app like the one you rolled out this spring holds up once dispatch volume spikes. That gap between the app and the back office is exactly where we live. We keep the two in sync so nobody rekeys a load twice. Happy to show you what that looks like on a real week of freight.\n\nBest,\nMara\nRelaylane",
+      "planted_violations": [
+        "do_not_ask_a_question_in_the_first_email_fc184c"
+      ],
+      "difficulty": "borderline",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      },
+      "adversarial_tags": [
+        "indirect_question_no_qmark"
+      ]
+    },
+    {
+      "id": "em_004",
+      "instruction_set_id": "is_01",
+      "recipient_context": {
+        "company": "Cascade Logistics",
+        "industry": "third-party logistics",
+        "detail": "expanded into refrigerated warehousing"
+      },
+      "body": "Hi Cascade Logistics team,\n\nCongrats on moving into refrigerated warehousing, that is a hard mode to add. Our pricing starts at a flat monthly rate that undercuts what most cold-chain teams pay for tracking. We keep temperature logs and handoffs in one place so audits stop being a fire drill. I would love to show you the short version.\n\nTalk soon,\nDev\nFlowstitch",
+      "planted_violations": [
+        "never_mention_pricing_721fb9"
+      ],
+      "difficulty": "single",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_005",
+      "instruction_set_id": "is_01",
+      "recipient_context": {
+        "company": "Latham Manufacturing",
+        "industry": "contract manufacturing",
+        "detail": "took on a large aerospace client this year"
+      },
+      "body": "Hi Latham Manufacturing team,\n\nLanding a big aerospace client this year is a huge deal! Those programs bury a floor in paperwork fast, and the handoffs between stations are where quality slips. We keep all of that in one thread so nothing gets lost. Would love to show you the short version!\n\nTalk soon,\nDev\nFlowstitch",
+      "planted_violations": [
+        "no_exclamation_marks_df1778"
+      ],
+      "difficulty": "single",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_006",
+      "instruction_set_id": "is_01",
+      "recipient_context": {
+        "company": "Pinnacle Freight",
+        "industry": "freight brokerage",
+        "detail": "hired a new head of operations recently"
+      },
+      "body": "Hi Pinnacle Freight team,\n\nWith a new head of operations settling in, this is the moment tooling gaps get noticed. We stitch the load handoffs your brokers do by hand into one clean flow, so onboarding a process change takes a day instead of a quarter. Glad to walk the new ops lead through it whenever the dust settles.\n\nThanks, Dev",
+      "planted_violations": [
+        "sign_off_with_a_first_name_and_company_n_0feddf"
+      ],
+      "difficulty": "single",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_007",
+      "instruction_set_id": "is_01",
+      "recipient_context": {
+        "company": "Orchard Software",
+        "industry": "field-service software",
+        "detail": "a mid-size company in field service"
+      },
+      "body": "Hi Orchard Software team,\n\nCompanies in field service like Orchard Software all run into the same wall as they scale: too many tools, not enough glue. We are the glue. We connect the systems your teams already use so the handoffs stop leaking time. I would love to walk you through the short version.\n\nTalk soon,\nDev\nFlowstitch",
+      "planted_violations": [
+        "always_reference_something_specific_abou_05b5e9"
+      ],
+      "difficulty": "borderline",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      },
+      "adversarial_tags": [
+        "namedrop_boilerplate"
+      ]
+    },
+    {
+      "id": "em_008",
+      "instruction_set_id": "is_01",
+      "recipient_context": {
+        "company": "Meridian Foods",
+        "industry": "food distribution",
+        "detail": "added a second distribution hub"
+      },
+      "body": "Hi Meridian Foods team,\n\nA second distribution hub is a great problem to have! Our platform runs $400 a month and ties your two hubs into one view so nothing falls between them. Congrats again on the expansion!\n\nTalk soon,\nDev\nFlowstitch",
+      "planted_violations": [
+        "never_mention_pricing_721fb9",
+        "no_exclamation_marks_df1778"
+      ],
+      "difficulty": "multiple",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_009",
+      "instruction_set_id": "is_01",
+      "recipient_context": {
+        "company": "Vantage Health",
+        "industry": "medical device distribution",
+        "detail": "a mid-size medical distributor"
+      },
+      "body": "Hi there,\n\nI am reaching out because a lot of distributors your size are drowning in disconnected systems, and I think we can help. Our platform brings every handoff into a single place so your team stops rekeying the same order into three tools, which is the kind of quiet tax that adds up to a full day a week per person once you actually measure it across a quarter. We have done this for teams a lot like yours and the results were strong. Would you be open to a quick call next week to see whether it fits how your operation runs today?\n\nTalk soon,\nDev\nFlowstitch",
+      "planted_violations": [
+        "keep_it_under_90_words_9d71ef",
+        "do_not_ask_a_question_in_the_first_email_fc184c",
+        "always_reference_something_specific_abou_05b5e9"
+      ],
+      "difficulty": "multiple",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_010",
+      "instruction_set_id": "is_01",
+      "recipient_context": {
+        "company": "Brightline Retail",
+        "industry": "specialty retail",
+        "detail": "launched a same-day delivery pilot in Austin"
+      },
+      "body": "Hi Brightline Retail team,\n\nYour same-day delivery pilot in Austin caught my eye. Same-day is where the seams between order, pick, and dispatch really show, and a dropped handoff there costs you a customer, not just a minute. We keep those steps in one flow so the pilot can scale without a rebuild. I would love to walk you through the short version.\n\nTalk soon,\nDev\nFlowstitch",
+      "planted_violations": [],
+      "difficulty": "clean",
+      "generation": {
+        "mode": "compliant",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_011",
+      "instruction_set_id": "is_02",
+      "recipient_context": {
+        "company": "Harborview Support Co",
+        "industry": "customer support outsourcing",
+        "detail": "a mid-size support BPO"
+      },
+      "body": "Hey Harborview team,\n\nQuick one. Running a support floor at your size usually means agents bouncing between a helpdesk, a wiki, and three chat windows just to answer one ticket. We pull the answers into the same place the agent is already typing, so the good reps stop playing detective. Want me to send over a two-minute clip of it working on a real queue? No pressure either way.\n\nCheers,\nJonah\nDeskweave",
+      "planted_violations": [],
+      "difficulty": "clean",
+      "generation": {
+        "mode": "compliant",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_012",
+      "instruction_set_id": "is_02",
+      "recipient_context": {
+        "company": "Tidewater Apps",
+        "industry": "consumer mobile apps",
+        "detail": "a fast-growing app studio"
+      },
+      "body": "Hey Tidewater team,\n\nLoved seeing how fast your studio is shipping lately. Here is the thing we hear from teams growing at your clip: support headcount balloons right when you least want it to. Our tool basically pays for itself within a quarter because one agent handles what used to take three, and the returns show up in weeks, not some far-off someday. Want a peek at it running on a real queue?\n\nCheers,\nJonah\nDeskweave",
+      "planted_violations": [
+        "do_not_imply_pricing_indirectly_with_phr_8fdedd"
+      ],
+      "difficulty": "borderline",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      },
+      "adversarial_tags": [
+        "implied_pricing_no_banned_word"
+      ]
+    },
+    {
+      "id": "em_013",
+      "instruction_set_id": "is_02",
+      "recipient_context": {
+        "company": "Copperline Retail",
+        "industry": "e-commerce",
+        "detail": "a mid-size online retailer"
+      },
+      "body": "Hey Copperline team,\n\nQuick one. Support at your volume gets expensive fast, and most of that cost is agents digging for answers that already exist somewhere. We drop those answers right where the agent is typing. Want me to send a short clip of it on a live queue?\n\nCheers,\nJonah\nDeskweave",
+      "planted_violations": [
+        "do_not_use_pricing_words_such_as_price_c_1461fe"
+      ],
+      "difficulty": "single",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_014",
+      "instruction_set_id": "is_02",
+      "recipient_context": {
+        "company": "Sterling Financial Group",
+        "industry": "financial services",
+        "detail": "a mid-size wealth manager"
+      },
+      "body": "Hello Sterling Financial Group,\n\nI am reaching out to explore whether there may be an opportunity to align on how your organization handles client-support operations this quarter. We enable support teams to leverage existing knowledge more effectively and drive measurable efficiency across the function. I would welcome the chance to connect and discuss how this maps to your strategic priorities.\n\nRegards,\nJonah\nDeskweave",
+      "planted_violations": [
+        "keep_the_tone_casual_and_conversational_2883c7"
+      ],
+      "difficulty": "borderline",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      },
+      "adversarial_tags": [
+        "corporate_tone_drift"
+      ]
+    },
+    {
+      "id": "em_015",
+      "instruction_set_id": "is_02",
+      "recipient_context": {
+        "company": "Junebug Goods",
+        "industry": "consumer goods",
+        "detail": "a growing DTC brand"
+      },
+      "body": "Hey Junebug team,\n\nQuick one, and I will keep it real. When a DTC brand takes off the way yours has, support is usually the first thing to buckle, because every new customer is a new question and the team answering them is still the same three people who were there at the start. What tends to happen is the good reps burn out playing detective across a helpdesk, a wiki, and a handful of chat threads that never quite agree with each other. We fix that by pulling the right answer into the exact place the agent is already typing, so nobody has to go hunting, and the answers stay consistent no matter who is on shift. Teams tell us it feels less like adding a tool and more like finally giving the team the memory it always should have had. Want a peek at it on a live queue sometime this week?\n\nCheers,\nJonah\nDeskweave",
+      "planted_violations": [
+        "keep_it_under_120_words_3162de"
+      ],
+      "difficulty": "single",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_016",
+      "instruction_set_id": "is_02",
+      "recipient_context": {
+        "company": "Alderman Health",
+        "industry": "healthtech",
+        "detail": "a telehealth startup"
+      },
+      "body": "Hey Alderman Health team,\n\nQuick one. Telehealth support has a nasty habit of turning every routine question into a five-tool scavenger hunt. We keep the answers where your agents already work so they can actually stay with the patient. Want a short clip of it on a live queue?\n\nCheers,\nJonah",
+      "planted_violations": [
+        "sign_off_with_a_first_name_and_company_n_0feddf"
+      ],
+      "difficulty": "single",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_017",
+      "instruction_set_id": "is_02",
+      "recipient_context": {
+        "company": "Redwood Outfitters",
+        "industry": "outdoor retail",
+        "detail": "a mid-size outdoor gear retailer"
+      },
+      "body": "Hey Redwood team,\n\nQuick one. Support at peak season gets pricey, and the cost mostly comes from agents hunting for answers. Our tool is genuinely cost-effective and pays for itself fast because one rep does the work of three. Want a clip of it on a live queue?\n\nCheers,\nJonah\nDeskweave",
+      "planted_violations": [
+        "do_not_use_pricing_words_such_as_price_c_1461fe",
+        "do_not_imply_pricing_indirectly_with_phr_8fdedd"
+      ],
+      "difficulty": "multiple",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_018",
+      "instruction_set_id": "is_02",
+      "recipient_context": {
+        "company": "Maple & Co",
+        "industry": "home goods",
+        "detail": "a mid-size home goods brand"
+      },
+      "body": "Hey Maple & Co team,\n\nQuick one. As a home goods brand scales, the same twenty questions come in a thousand different ways, and your reps end up rewriting the same answer all day. We surface the right one automatically, right where they are typing. Want me to send a two-minute clip of it working on a live queue? Totally fine if the timing is off.\n\nCheers,\nJonah\nDeskweave",
+      "planted_violations": [],
+      "difficulty": "clean",
+      "generation": {
+        "mode": "compliant",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_019",
+      "instruction_set_id": "is_02",
+      "recipient_context": {
+        "company": "Gearbox Tools",
+        "industry": "hardware e-commerce",
+        "detail": "a mid-size tool retailer"
+      },
+      "body": "Hey Gearbox team,\n\nQuick one. Your reps probably lose a chunk of every shift just hunting for the answer to a question they have answered before. We put that answer right where they are typing, which saves the team hours it can spend on the tickets that actually need a human. Want a short clip of it on a live queue?\n\nCheers,\nJonah\nDeskweave",
+      "planted_violations": [],
+      "difficulty": "borderline",
+      "generation": {
+        "mode": "compliant",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      },
+      "adversarial_tags": [
+        "borderline_value_not_pricing"
+      ]
+    },
+    {
+      "id": "em_020",
+      "instruction_set_id": "is_02",
+      "recipient_context": {
+        "company": "Vanguard Realty Partners",
+        "industry": "real estate",
+        "detail": "a mid-size brokerage"
+      },
+      "body": "Dear Vanguard Realty Partners,\n\nI am writing to introduce our organization and to explore a potential partnership opportunity that we believe may deliver significant value to your enterprise. In today's competitive landscape, client-support operations represent a critical differentiator, and many firms of your stature are actively seeking to optimize this function. Our solution empowers support organizations to leverage their institutional knowledge base, thereby driving operational efficiencies and elevating the overall client experience across every touchpoint. We have partnered with numerous best-in-class organizations to realize these outcomes, and we are confident that a similar engagement could yield comparable results for your esteemed team. I would be most grateful for the opportunity to schedule an introductory call at your earliest convenience.\n\nWarm regards,\nJonah\nDeskweave",
+      "planted_violations": [
+        "keep_the_tone_casual_and_conversational_2883c7",
+        "keep_it_under_120_words_3162de"
+      ],
+      "difficulty": "multiple",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_021",
+      "instruction_set_id": "is_03",
+      "recipient_context": {
+        "company": "Northwind Freight",
+        "industry": "freight",
+        "detail": "opened a Columbus cross-dock in March"
+      },
+      "body": "Hi Northwind Freight,\n\nSaw you opened the Columbus cross-dock in March. New cross-docks are where load data goes to get lost between systems. We keep it in sync so your dispatchers stop rekeying. Worth a quick look?\n\nBest,\nPriya\nSyncrail",
+      "planted_violations": [],
+      "difficulty": "clean",
+      "generation": {
+        "mode": "compliant",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      },
+      "adversarial_tags": [
+        "specific_checkable"
+      ]
+    },
+    {
+      "id": "em_022",
+      "instruction_set_id": "is_03",
+      "recipient_context": {
+        "company": "Northwind Freight",
+        "industry": "freight",
+        "detail": "opened a Columbus cross-dock in March"
+      },
+      "body": "Hi Northwind Freight,\n\nCompanies in freight like Northwind Freight all face the same pressures as they grow: rising complexity, tighter margins, more systems to juggle. We help you stay ahead of all of it. Worth a quick look?\n\nBest,\nPriya\nSyncrail",
+      "planted_violations": [
+        "reference_something_specific_and_verifia_70ff1d"
+      ],
+      "difficulty": "borderline",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      },
+      "adversarial_tags": [
+        "namedrop_boilerplate"
+      ]
+    },
+    {
+      "id": "em_023",
+      "instruction_set_id": "is_03",
+      "recipient_context": {
+        "company": "Cobalt Data",
+        "industry": "data integration",
+        "detail": "shipped a new API gateway"
+      },
+      "body": "Hi Cobalt Data,\n\nYour new API gateway launch got my attention. Gateways multiply the integrations you have to babysit. We keep those mappings in sync so a schema change does not page someone at 2am. Worth fifteen minutes?\n\nBest,\nPriya\nSyncrail",
+      "planted_violations": [],
+      "difficulty": "clean",
+      "generation": {
+        "mode": "compliant",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      },
+      "adversarial_tags": [
+        "specific_checkable"
+      ]
+    },
+    {
+      "id": "em_024",
+      "instruction_set_id": "is_03",
+      "recipient_context": {
+        "company": "Brightpath Analytics",
+        "industry": "analytics",
+        "detail": "a mid-size analytics vendor"
+      },
+      "body": "Hi Brightpath Analytics,\n\nI wanted to reach out because analytics vendors at your stage almost always hit the same wall: the number of upstream data sources you have to integrate grows faster than the team maintaining them, and every schema change upstream quietly breaks a dashboard downstream that nobody notices until a customer does. We keep all of those source mappings in sync automatically, so your engineers stop spending their mornings chasing silent breakages and can get back to the roadmap work you actually hired them for. Would it be worth a short call?\n\nBest,\nPriya\nSyncrail",
+      "planted_violations": [
+        "keep_the_whole_email_under_500_character_c4d6df"
+      ],
+      "difficulty": "single",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_025",
+      "instruction_set_id": "is_03",
+      "recipient_context": {
+        "company": "Keystone Payments",
+        "industry": "payments",
+        "detail": "a mid-size payments processor"
+      },
+      "body": "Hi there,\n\nPayments companies all deal with the same integration sprawl as they scale. We keep your data mappings in sync so nothing breaks silently. Worth a quick look?\n\nBest,\nPriya\nSyncrail",
+      "planted_violations": [
+        "reference_the_recipient_s_company_by_nam_b9af4e",
+        "reference_something_specific_and_verifia_70ff1d"
+      ],
+      "difficulty": "multiple",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_026",
+      "instruction_set_id": "is_03",
+      "recipient_context": {
+        "company": "Solstice Media",
+        "industry": "digital media",
+        "detail": "migrated to a new CMS"
+      },
+      "body": "Hi Solstice Media,\n\nCongrats on the CMS migration! Migrations scatter content data across systems that fall out of sync fast. We keep those mappings aligned so your team stops firefighting. Worth a quick look?\n\nBest,\nPriya\nSyncrail",
+      "planted_violations": [
+        "no_exclamation_marks_df1778"
+      ],
+      "difficulty": "single",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_027",
+      "instruction_set_id": "is_03",
+      "recipient_context": {
+        "company": "Ironwood Manufacturing",
+        "industry": "manufacturing",
+        "detail": "adopted a new ERP"
+      },
+      "body": "Hi Ironwood Manufacturing,\n\nSaw you adopted a new ERP. ERP rollouts leave a trail of half-synced integrations behind them. We keep those mappings clean so the rollout actually sticks. Worth a quick look?\n\nBest,\nPriya",
+      "planted_violations": [
+        "sign_off_with_a_first_name_and_company_n_0feddf"
+      ],
+      "difficulty": "single",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_028",
+      "instruction_set_id": "is_03",
+      "recipient_context": {
+        "company": "Lumen Robotics",
+        "industry": "robotics",
+        "detail": "closed a Series B in April"
+      },
+      "body": "Hi Lumen Robotics,\n\nCongrats on the April Series B. Fresh funding usually means new systems bolted on fast, and fast means integrations drift. We keep your data mappings in sync so scaling does not mean breaking. Worth a look?\n\nBest,\nPriya\nSyncrail",
+      "planted_violations": [],
+      "difficulty": "clean",
+      "generation": {
+        "mode": "compliant",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      },
+      "adversarial_tags": [
+        "specific_checkable"
+      ]
+    },
+    {
+      "id": "em_029",
+      "instruction_set_id": "is_03",
+      "recipient_context": {
+        "company": "Fairfield Logistics",
+        "industry": "logistics",
+        "detail": "a mid-size logistics company"
+      },
+      "body": "Hi Fairfield Logistics,\n\nYour recent growth is hard to miss, and growth like that usually strains the systems holding your shipment data together. We keep those in sync so nothing slips. Worth a quick look?\n\nBest,\nPriya\nSyncrail",
+      "planted_violations": [
+        "reference_something_specific_and_verifia_70ff1d"
+      ],
+      "difficulty": "borderline",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      },
+      "adversarial_tags": [
+        "vague_reference"
+      ]
+    },
+    {
+      "id": "em_030",
+      "instruction_set_id": "is_03",
+      "recipient_context": {
+        "company": "Cedar Grove Foods",
+        "industry": "food production",
+        "detail": "added a second production line"
+      },
+      "body": "Hi Cedar Grove Foods,\n\nCongrats on the second production line, that is a milestone worth celebrating! Adding a line is exactly the moment your traceability data starts living in two places at once, and the two places never quite agree, which is how a recall turns from a bad afternoon into a bad week that no one on the floor will forget! We keep every batch and lot mapping synced across both lines automatically so your quality team is working from one source of truth instead of reconciling spreadsheets by hand at the end of every shift! Worth a quick fifteen minutes to see it?\n\nBest,\nPriya\nSyncrail",
+      "planted_violations": [
+        "keep_the_whole_email_under_500_character_c4d6df",
+        "no_exclamation_marks_df1778"
+      ],
+      "difficulty": "multiple",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_031",
+      "instruction_set_id": "is_04",
+      "recipient_context": {
+        "company": "Sunny Day Camps",
+        "industry": "youth programs",
+        "detail": "runs summer camps across three states"
+      },
+      "body": "Hi Sunny Day Camps team,\n\nRunning camps across three states means a scheduling headache the rest of us can only imagine. We take the back-and-forth out of it so your staff spends time with kids, not calendars. I would love to show you how light it feels.\n\nWarmly,\nEli\nBrightslot",
+      "planted_violations": [],
+      "difficulty": "clean",
+      "generation": {
+        "mode": "compliant",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_032",
+      "instruction_set_id": "is_04",
+      "recipient_context": {
+        "company": "Coastal Dental",
+        "industry": "dental practice",
+        "detail": "opened a second office"
+      },
+      "body": "Hi Coastal Dental team,\n\nYou might be wondering how a second office is supposed to share a front desk without the schedule turning into chaos. That is the exact knot we untie. We keep both calendars in step so nobody double-books a chair. I would love to show you.\n\nWarmly,\nEli\nBrightslot",
+      "planted_violations": [
+        "do_not_ask_any_questions_5e2d10"
+      ],
+      "difficulty": "borderline",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      },
+      "adversarial_tags": [
+        "indirect_question_no_qmark"
+      ]
+    },
+    {
+      "id": "em_033",
+      "instruction_set_id": "is_04",
+      "recipient_context": {
+        "company": "Riverside Fitness",
+        "industry": "fitness",
+        "detail": "a growing gym chain"
+      },
+      "body": "Hi Riverside Fitness team,\n\nClass scheduling across a growing chain is a lot to hold in your head. We make it feel effortless so your front desk can actually greet people. Would you have twenty minutes this week for a quick look?\n\nWarmly,\nEli\nBrightslot",
+      "planted_violations": [
+        "do_not_ask_any_questions_5e2d10"
+      ],
+      "difficulty": "single",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_034",
+      "instruction_set_id": "is_04",
+      "recipient_context": {
+        "company": "Hillcrest Veterinary",
+        "industry": "veterinary",
+        "detail": "a busy multi-vet clinic"
+      },
+      "body": "Hello Hillcrest Veterinary,\n\nPer our focus on operational excellence, we provide scheduling infrastructure designed to optimize appointment throughput for multi-provider clinics. Our platform facilitates resource allocation and reduces administrative overhead across your practice. We would value the opportunity to demonstrate the solution.\n\nWarmly,\nEli\nBrightslot",
+      "planted_violations": [
+        "keep_the_tone_warm_and_casual_never_stif_7d76aa"
+      ],
+      "difficulty": "borderline",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      },
+      "adversarial_tags": [
+        "corporate_tone_drift"
+      ]
+    },
+    {
+      "id": "em_035",
+      "instruction_set_id": "is_04",
+      "recipient_context": {
+        "company": "Maplewood Academy",
+        "industry": "private education",
+        "detail": "a K-8 private school"
+      },
+      "body": "Hi Maplewood Academy team,\n\nCoordinating parent-teacher conferences by hand is the kind of task that quietly eats a whole week of somebody's time every single term, and it never gets easier no matter how many times you have done it before. We take that entire scramble off your plate so your staff can focus on the students in front of them instead of a spreadsheet full of time slots that keeps changing every hour. I would genuinely love to show you how simple we can make the whole thing feel.\n\nWarmly,\nEli\nBrightslot",
+      "planted_violations": [
+        "keep_it_under_75_words_07f1e5"
+      ],
+      "difficulty": "single",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_036",
+      "instruction_set_id": "is_04",
+      "recipient_context": {
+        "company": "Gables Realty",
+        "industry": "real estate",
+        "detail": "a boutique brokerage"
+      },
+      "body": "Hi Gables Realty team,\n\nJuggling showings across a busy weekend is a scheduling puzzle we love to solve. We keep every agent's calendar in step so nobody double-books a listing. And there is a nice discount for boutique teams like yours right now. I would love to show you.\n\nWarmly,\nEli\nBrightslot",
+      "planted_violations": [
+        "do_not_mention_pricing_or_discounts_eefdde"
+      ],
+      "difficulty": "single",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_037",
+      "instruction_set_id": "is_04",
+      "recipient_context": {
+        "company": "Northshore Spa",
+        "industry": "wellness",
+        "detail": "a day spa and wellness center"
+      },
+      "body": "Hi Northshore Spa team,\n\nA day spa lives and dies by the calendar, and a single mixed-up booking can throw a whole afternoon. We keep it all flowing so your guests feel looked after from the first minute. I would love to show you.\n\nWarmly, Eli",
+      "planted_violations": [
+        "sign_off_with_a_first_name_and_company_n_0feddf"
+      ],
+      "difficulty": "single",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_038",
+      "instruction_set_id": "is_04",
+      "recipient_context": {
+        "company": "Trailhead Outfitters",
+        "industry": "outdoor retail",
+        "detail": "runs guided trips"
+      },
+      "body": "Hi Trailhead Outfitters team,\n\nBooking guided trips around weather and guide availability is a real juggle. We make the whole dance feel easy so your crew can focus on the trail, not the calendar. I would love to walk you through it whenever suits.\n\nWarmly,\nEli\nBrightslot",
+      "planted_violations": [],
+      "difficulty": "clean",
+      "generation": {
+        "mode": "compliant",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_039",
+      "instruction_set_id": "is_04",
+      "recipient_context": {
+        "company": "Beacon Legal",
+        "industry": "legal services",
+        "detail": "a mid-size law firm"
+      },
+      "body": "Dear Beacon Legal,\n\nWe wish to formally introduce our scheduling solution, which has been architected to optimize calendar coordination for professional services firms of your caliber and to reduce the administrative burden associated with multi-attorney availability management across your practice groups. Would your firm be amenable to scheduling a formal introductory consultation at a mutually agreeable time in the coming weeks to review the capabilities of the platform in appropriate detail?\n\nRegards,\nEli\nBrightslot",
+      "planted_violations": [
+        "do_not_ask_any_questions_5e2d10",
+        "keep_the_tone_warm_and_casual_never_stif_7d76aa",
+        "keep_it_under_75_words_07f1e5"
+      ],
+      "difficulty": "multiple",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_040",
+      "instruction_set_id": "is_04",
+      "recipient_context": {
+        "company": "Willow Creek Clinic",
+        "industry": "healthcare",
+        "detail": "a family medicine clinic"
+      },
+      "body": "Hi Willow Creek Clinic team,\n\nA family clinic runs on a calendar that never sits still, and one mix-up ripples through a whole morning. We keep the schedule steady and, respectfully, out of your way, so your team can stay with patients. I would love to show you how easy it feels.\n\nWarmly,\nEli\nBrightslot",
+      "planted_violations": [],
+      "difficulty": "borderline",
+      "generation": {
+        "mode": "compliant",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      },
+      "adversarial_tags": [
+        "borderline_tone_ok"
+      ]
+    },
+    {
+      "id": "em_041",
+      "instruction_set_id": "is_05",
+      "recipient_context": {
+        "company": "Portside Logistics",
+        "industry": "logistics",
+        "detail": "manages a regional port terminal"
+      },
+      "body": "Hello Portside Logistics team,\n\nRunning a regional port terminal means your shipment data moves faster than the tools tracking it. We give your operation a single, current view of every container so your dispatchers stop reconciling by hand. I would welcome the chance to show Portside Logistics a short walkthrough on a real day of throughput.\n\nBest regards,\nTomas\nCleartrack",
+      "planted_violations": [],
+      "difficulty": "clean",
+      "generation": {
+        "mode": "compliant",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_042",
+      "instruction_set_id": "is_05",
+      "recipient_context": {
+        "company": "Granite Freight",
+        "industry": "freight",
+        "detail": "a regional carrier"
+      },
+      "body": "Hello Granite Freight team,\n\nAs a regional carrier scales, the analytics stack usually sprawls faster than anyone planned. We give Granite Freight one clean view of throughput, and for most carriers the platform pays for itself well before renewal because the reclaimed dispatcher hours add up quickly. I would welcome the chance to walk you through it.\n\nBest regards,\nTomas\nCleartrack",
+      "planted_violations": [
+        "do_not_imply_pricing_without_stating_it_12cf31"
+      ],
+      "difficulty": "borderline",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      },
+      "adversarial_tags": [
+        "implied_pricing_no_banned_word"
+      ]
+    },
+    {
+      "id": "em_043",
+      "instruction_set_id": "is_05",
+      "recipient_context": {
+        "company": "Summit Distribution",
+        "industry": "wholesale distribution",
+        "detail": "a national distributor"
+      },
+      "body": "Hello Summit Distribution team,\n\nOperating at national scale means your throughput data lives in a dozen places at once! We consolidate it into one current view so Summit Distribution can act on today's numbers, not last week's. I would welcome the chance to walk you through a short version.\n\nBest regards,\nTomas\nCleartrack",
+      "planted_violations": [
+        "never_use_exclamation_marks_46541b"
+      ],
+      "difficulty": "single",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_044",
+      "instruction_set_id": "is_05",
+      "recipient_context": {
+        "company": "Beacon Freightways",
+        "industry": "freight",
+        "detail": "an interstate carrier"
+      },
+      "body": "Hello Beacon Freightways team,\n\nHow much time does your dispatch team lose reconciling numbers across systems every week. For most interstate carriers it is more than they expect. We give Beacon Freightways one current view of throughput so that work disappears. I would welcome the chance to show you.\n\nBest regards,\nTomas\nCleartrack",
+      "planted_violations": [
+        "do_not_ask_a_question_in_the_first_email_fc184c"
+      ],
+      "difficulty": "single",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_045",
+      "instruction_set_id": "is_05",
+      "recipient_context": {
+        "company": "Cardinal Supply",
+        "industry": "industrial supply",
+        "detail": "a regional supplier"
+      },
+      "body": "Hello Cardinal Supply team,\n\nAs a regional supplier grows, the reporting stack tends to grow with it, but not in any planned way, and before long your operations team is pulling numbers from four systems that never quite agree, then spending the first hour of every morning deciding which version to believe before anyone can make a single real decision about the day ahead. We consolidate all of it into one current, trustworthy view of throughput for Cardinal Supply, so that reconciliation work simply goes away and your team starts the day already aligned. I would genuinely welcome the chance to walk you through exactly how it comes together.\n\nBest regards,\nTomas\nCleartrack",
+      "planted_violations": [
+        "keep_it_under_100_words_87fffe"
+      ],
+      "difficulty": "single",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_046",
+      "instruction_set_id": "is_05",
+      "recipient_context": {
+        "company": "Delta Warehousing",
+        "industry": "warehousing",
+        "detail": "a mid-size 3PL"
+      },
+      "body": "Hello there,\n\nWarehousing operations at your scale generate more throughput data than any one dashboard can hold. We consolidate it into a single current view so your team stops reconciling by hand. I would welcome the chance to walk you through a short version.\n\nBest regards,\nTomas\nCleartrack",
+      "planted_violations": [
+        "reference_the_recipient_s_company_by_nam_2bc486"
+      ],
+      "difficulty": "single",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_047",
+      "instruction_set_id": "is_05",
+      "recipient_context": {
+        "company": "Monarch Transport",
+        "industry": "transport",
+        "detail": "a regional trucking company"
+      },
+      "body": "Hello Monarch Transport team,\n\nRegional trucking runs on numbers that change by the hour, and stale reports cost you real decisions. We give Monarch Transport one current view of throughput so your team acts on today. I would welcome the chance to show you.\n\nBest regards, Tomas",
+      "planted_violations": [
+        "sign_off_with_a_first_name_and_company_n_0feddf"
+      ],
+      "difficulty": "single",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_048",
+      "instruction_set_id": "is_05",
+      "recipient_context": {
+        "company": "Evergreen Freight",
+        "industry": "freight",
+        "detail": "a mid-size carrier"
+      },
+      "body": "Hello Evergreen Freight team,\n\nYour throughput data is scattered across too many tools right now! We pull it into one current view for Evergreen Freight, and it saves you money almost immediately by cutting the hours your team burns reconciling! I would welcome the chance to show you.\n\nBest regards,\nTomas\nCleartrack",
+      "planted_violations": [
+        "never_use_exclamation_marks_46541b",
+        "do_not_imply_pricing_without_stating_it_12cf31"
+      ],
+      "difficulty": "multiple",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_049",
+      "instruction_set_id": "is_05",
+      "recipient_context": {
+        "company": "Anchor Shipping",
+        "industry": "maritime shipping",
+        "detail": "runs a coastal fleet"
+      },
+      "body": "Hello Anchor Shipping team,\n\nCoordinating a coastal fleet means throughput numbers that shift with every tide and port call. We give Anchor Shipping one current view of it all so your team plans against reality instead of yesterday's snapshot. I would welcome the chance to walk you through a short version.\n\nBest regards,\nTomas\nCleartrack",
+      "planted_violations": [],
+      "difficulty": "clean",
+      "generation": {
+        "mode": "compliant",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      }
+    },
+    {
+      "id": "em_050",
+      "instruction_set_id": "is_05",
+      "recipient_context": {
+        "company": "Highland Distribution",
+        "industry": "distribution",
+        "detail": "a regional distributor"
+      },
+      "body": "Hello Highland Distribution team,\n\nAs a regional distributor grows, the reporting stack grows with it, usually into a tangle. We consolidate throughput into one current view for Highland Distribution, and it will not stretch your budget the way another heavy platform would. I would welcome the chance to show you.\n\nBest regards,\nTomas\nCleartrack",
+      "planted_violations": [
+        "do_not_imply_pricing_without_stating_it_12cf31"
+      ],
+      "difficulty": "borderline",
+      "generation": {
+        "mode": "violating",
+        "model": "curated-seed",
+        "created_at": "2026-09-03T00:00:00Z"
+      },
+      "adversarial_tags": [
+        "implied_pricing_soft"
+      ]
+    }
+  ]
+}

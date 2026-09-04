@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "run_id": "test-run-001",
+  "config": {
+    "model": "fake-model",
+    "writer_model": "fake-model",
+    "cache": true
+  },
+  "emails": [
+    {
+      "email_id": "em_001",
+      "instruction_set_id": "is_t1",
+      "initial_results": [
+        {"rule_id": "rule_det", "passed": true, "reason": "", "kind": "deterministic", "source": "deterministic"},
+        {"rule_id": "rule_sem", "passed": true, "reason": "", "kind": "semantic", "source": "semantic"}
+      ],
+      "repair_attempted": false,
+      "repaired_body": null,
+      "final_results": [
+        {"rule_id": "rule_det", "passed": true, "reason": "", "kind": "deterministic", "source": "deterministic"},
+        {"rule_id": "rule_sem", "passed": true, "reason": "", "kind": "semantic", "source": "semantic"}
+      ],
+      "status": "pass",
+      "still_failing": []
+    },
+    {
+      "email_id": "em_002",
+      "instruction_set_id": "is_t1",
+      "initial_results": [
+        {"rule_id": "rule_det", "passed": false, "reason": "word count exceeded", "kind": "deterministic", "source": "deterministic"},
+        {"rule_id": "rule_sem", "passed": true, "reason": "", "kind": "semantic", "source": "semantic"}
+      ],
+      "repair_attempted": true,
+      "repaired_body": "Fixed email body.",
+      "final_results": [
+        {"rule_id": "rule_det", "passed": true, "reason": "", "kind": "deterministic", "source": "deterministic"},
+        {"rule_id": "rule_sem", "passed": true, "reason": "", "kind": "semantic", "source": "semantic"}
+      ],
+      "status": "pass_after_repair",
+      "still_failing": []
+    },
+    {
+      "email_id": "em_003",
+      "instruction_set_id": "is_t1",
+      "initial_results": [
+        {"rule_id": "rule_det", "passed": true, "reason": "", "kind": "deterministic", "source": "deterministic"},
+        {"rule_id": "rule_sem", "passed": false, "reason": "no specific company detail", "kind": "semantic", "source": "semantic"}
+      ],
+      "repair_attempted": true,
+      "repaired_body": "Attempted but still insufficient.",
+      "final_results": [
+        {"rule_id": "rule_det", "passed": true, "reason": "", "kind": "deterministic", "source": "deterministic"},
+        {"rule_id": "rule_sem", "passed": false, "reason": "no specific company detail", "kind": "semantic", "source": "semantic"}
+      ],
+      "status": "held",
+      "still_failing": ["rule_sem"]
+    },
+    {
+      "email_id": "em_004",
+      "instruction_set_id": "is_t1",
+      "initial_results": [
+        {"rule_id": "rule_det", "passed": true, "reason": "", "kind": "deterministic", "source": "deterministic"},
+        {"rule_id": "rule_sem", "passed": true, "reason": "", "kind": "semantic", "source": "semantic"}
+      ],
+      "repair_attempted": false,
+      "repaired_body": null,
+      "final_results": [
+        {"rule_id": "rule_det", "passed": true, "reason": "", "kind": "deterministic", "source": "deterministic"},
+        {"rule_id": "rule_sem", "passed": true, "reason": "", "kind": "semantic", "source": "semantic"}
+      ],
+      "status": "pass",
+      "still_failing": []
+    },
+    {
+      "email_id": "em_005",
+      "instruction_set_id": "is_t1",
+      "initial_results": [
+        {"rule_id": "rule_det", "passed": false, "reason": "false alarm — grader flagged incorrectly", "kind": "deterministic", "source": "deterministic"},
+        {"rule_id": "rule_sem", "passed": true, "reason": "", "kind": "semantic", "source": "semantic"}
+      ],
+      "repair_attempted": true,
+      "repaired_body": "Repaired unnecessarily.",
+      "final_results": [
+        {"rule_id": "rule_det", "passed": true, "reason": "", "kind": "deterministic", "source": "deterministic"},
+        {"rule_id": "rule_sem", "passed": true, "reason": "", "kind": "semantic", "source": "semantic"}
+      ],
+      "status": "pass_after_repair",
+      "still_failing": []
+    }
+  ],
+  "summary": {
+    "n_emails": 5,
+    "passed_first_try": 2,
+    "passed_after_repair": 2,
+    "held": 1,
+    "adherence_rate": 0.8
+  }
+}

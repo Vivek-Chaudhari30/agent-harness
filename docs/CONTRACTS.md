@@ -322,6 +322,22 @@ exists to expose.
 
 ---
 
+## 3.6 Integration-phase contract changes (reconciled 2026-09-04)
+
+**Lane A proposal accepted** (`docs/contract-changes/lane-a-compiler.md`):
+`check_email` has a fixed signature, but `company_name_mentioned` requires a
+runtime company name from the email record. `grade_email` (Integration) must
+clone any Rule with `check_id == "company_name_mentioned"` and inject
+`params["company"]` from `email_record["recipient_context"]["company"]` before
+calling `check_email`. `compile_instructions` ships these rules with
+`params={"company": ""}` as documented workaround; the empty-string fallback
+continues to pass silently when called outside Integration context (e.g. unit
+tests that don't have a live email record).
+
+No other proposals were filed. No proposals were rejected.
+
+---
+
 ## 4. Rules every lane obeys
 
 1. **Structured output only.** All model calls go through `model_client.call_json` with a schema.
