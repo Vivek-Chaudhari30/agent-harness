@@ -101,7 +101,11 @@ need a live key, your lane is not done.
 > do not attempt general natural-language-to-code compilation.
 >
 > Rule ids must be derived from instruction content, never from list position, so that reordering an
-> instruction set does not silently invalidate every label downstream.
+> instruction set does not silently invalidate every label downstream. **Use
+> `schemas.derive_rule_id(source_instruction)` from Phase 0 for every `Rule.id`. Do not write your
+> own derivation.** `writer.py` already uses that function to map a rule id back to its instruction,
+> so a private scheme here would desynchronize ids across the compiler, the fixtures, the labels and
+> the scorer, and nobody would notice until the numbers were already wrong.
 >
 > Deterministic: implement a `CHECKS` registry mapping `check_id` to pure
 > `fn(text, params) -> (passed, reason)` callables. No network, no I/O, no clock, no randomness.
@@ -177,6 +181,10 @@ need a live key, your lane is not done.
 > `src/fixtures.py`, `src/labeler.py`, `src/review_tool.py`, `fixtures/emails.json`,
 > `fixtures/labels_model_draft.json`, `tests/test_fixtures.py`, `tests/test_labeler.py`.
 > Everything else is read-only. Use `writer.py` from Phase 0; do not write your own generator.
+>
+> **Rule ids.** Get them by calling Lane A's `compile_instructions` on the instruction set. Never
+> write a rule id by hand and never derive one yourself; `schemas.derive_rule_id` is the single
+> canonical implementation and `writer.write_violating_email` depends on it.
 >
 > **Fixtures.** 50 emails, 10 per instruction set. Per email, decide at generation time which rules
 > if any to deliberately violate, instruct the writer to violate exactly those, and record them as

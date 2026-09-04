@@ -96,6 +96,14 @@ test.
 Rule id slugs are stable across runs. Never derive a rule id from list position: derive it from the
 instruction content so that reordering an instruction set does not silently invalidate every label.
 
+**There is exactly one implementation of that derivation: `schemas.derive_rule_id(source_instruction)`,
+shipped in Phase 0.** It returns a readable slug plus a short content hash, for example
+`keep_it_under_90_words_3f9a1c`. Lane A must import and call it for every `Rule.id`; Lane C must
+obtain rule ids by compiling an instruction set, never by writing them out by hand. `writer.py`
+already depends on this function to map a rule id back to its instruction, so a second, private
+derivation anywhere would silently desynchronize rule ids across the compiler, the fixtures, the
+labels, and the scorer, and every downstream number would be computed over mismatched keys.
+
 `judge_prompt` is a **compiled artifact**, not the raw instruction restated. It states the rule, what
 counts as a violation, what does not, and asks for a single boolean plus a one-line reason. Compiling
 "always reference something specific about their company" into a judge prompt that just repeats that
