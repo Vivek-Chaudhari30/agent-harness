@@ -1,0 +1,2712 @@
+{
+  "version": 1,
+  "provenance": {
+    "kind": "model_draft",
+    "model": "curated-seed",
+    "labeler_prompt_sha": "58d6e45cb4432fc0427c04efb82ccd8c52ded6c8fd3f3ae6b1a7288f753236d7",
+    "reviewed_at": "",
+    "reviewer_note": "Draft labels authored alongside the curated seed corpus. Borderline rows intentionally contain low-confidence verdicts for the human review gate."
+  },
+  "labels": [
+    {
+      "email_id": "em_001",
+      "rule_id": "never_mention_pricing_721fb9",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_001",
+      "rule_id": "keep_it_under_90_words_9d71ef",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_001",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_001",
+      "rule_id": "always_reference_something_specific_abou_05b5e9",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_001",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_001",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_002",
+      "rule_id": "never_mention_pricing_721fb9",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_002",
+      "rule_id": "keep_it_under_90_words_9d71ef",
+      "violated": true,
+      "reason": "Runs a couple of words past the 90-word cap.",
+      "kind": "deterministic",
+      "confidence": "low",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_002",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_002",
+      "rule_id": "always_reference_something_specific_abou_05b5e9",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_002",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_002",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_003",
+      "rule_id": "never_mention_pricing_721fb9",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_003",
+      "rule_id": "keep_it_under_90_words_9d71ef",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_003",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": true,
+      "reason": "Frames a question rhetorically without a question mark.",
+      "kind": "deterministic",
+      "confidence": "low",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_003",
+      "rule_id": "always_reference_something_specific_abou_05b5e9",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_003",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_003",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_004",
+      "rule_id": "never_mention_pricing_721fb9",
+      "violated": true,
+      "reason": "States pricing outright.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_004",
+      "rule_id": "keep_it_under_90_words_9d71ef",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_004",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_004",
+      "rule_id": "always_reference_something_specific_abou_05b5e9",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_004",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_004",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_005",
+      "rule_id": "never_mention_pricing_721fb9",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_005",
+      "rule_id": "keep_it_under_90_words_9d71ef",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_005",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_005",
+      "rule_id": "always_reference_something_specific_abou_05b5e9",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_005",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": true,
+      "reason": "Uses exclamation marks.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_005",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_006",
+      "rule_id": "never_mention_pricing_721fb9",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_006",
+      "rule_id": "keep_it_under_90_words_9d71ef",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_006",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_006",
+      "rule_id": "always_reference_something_specific_abou_05b5e9",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_006",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_006",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": true,
+      "reason": "Sign-off is on one line without the company name.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_007",
+      "rule_id": "never_mention_pricing_721fb9",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_007",
+      "rule_id": "keep_it_under_90_words_9d71ef",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_007",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_007",
+      "rule_id": "always_reference_something_specific_abou_05b5e9",
+      "violated": true,
+      "reason": "Names the company but the reference is generic industry filler.",
+      "kind": "semantic",
+      "confidence": "low",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_007",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_007",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_008",
+      "rule_id": "never_mention_pricing_721fb9",
+      "violated": true,
+      "reason": "States a monthly price.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_008",
+      "rule_id": "keep_it_under_90_words_9d71ef",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_008",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_008",
+      "rule_id": "always_reference_something_specific_abou_05b5e9",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_008",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": true,
+      "reason": "Uses exclamation marks.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_008",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_009",
+      "rule_id": "never_mention_pricing_721fb9",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_009",
+      "rule_id": "keep_it_under_90_words_9d71ef",
+      "violated": true,
+      "reason": "Well over the 90-word cap.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_009",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": true,
+      "reason": "Ends on a direct question.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_009",
+      "rule_id": "always_reference_something_specific_abou_05b5e9",
+      "violated": true,
+      "reason": "No specific reference to the recipient.",
+      "kind": "semantic",
+      "confidence": "low",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_009",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_009",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_010",
+      "rule_id": "never_mention_pricing_721fb9",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_010",
+      "rule_id": "keep_it_under_90_words_9d71ef",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_010",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_010",
+      "rule_id": "always_reference_something_specific_abou_05b5e9",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_010",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_010",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_011",
+      "rule_id": "keep_the_tone_casual_and_conversational_2883c7",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_011",
+      "rule_id": "do_not_use_pricing_words_such_as_price_c_1461fe",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_011",
+      "rule_id": "do_not_imply_pricing_indirectly_with_phr_8fdedd",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_011",
+      "rule_id": "keep_it_under_120_words_3162de",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_011",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_012",
+      "rule_id": "keep_the_tone_casual_and_conversational_2883c7",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_012",
+      "rule_id": "do_not_use_pricing_words_such_as_price_c_1461fe",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_012",
+      "rule_id": "do_not_imply_pricing_indirectly_with_phr_8fdedd",
+      "violated": true,
+      "reason": "Implies pricing value without a banned word.",
+      "kind": "semantic",
+      "confidence": "low",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_012",
+      "rule_id": "keep_it_under_120_words_3162de",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_012",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_013",
+      "rule_id": "keep_the_tone_casual_and_conversational_2883c7",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_013",
+      "rule_id": "do_not_use_pricing_words_such_as_price_c_1461fe",
+      "violated": true,
+      "reason": "Uses the banned word 'cost'.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_013",
+      "rule_id": "do_not_imply_pricing_indirectly_with_phr_8fdedd",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_013",
+      "rule_id": "keep_it_under_120_words_3162de",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_013",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_014",
+      "rule_id": "keep_the_tone_casual_and_conversational_2883c7",
+      "violated": true,
+      "reason": "Tone drifts corporate rather than casual.",
+      "kind": "semantic",
+      "confidence": "low",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_014",
+      "rule_id": "do_not_use_pricing_words_such_as_price_c_1461fe",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_014",
+      "rule_id": "do_not_imply_pricing_indirectly_with_phr_8fdedd",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_014",
+      "rule_id": "keep_it_under_120_words_3162de",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_014",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_015",
+      "rule_id": "keep_the_tone_casual_and_conversational_2883c7",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_015",
+      "rule_id": "do_not_use_pricing_words_such_as_price_c_1461fe",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_015",
+      "rule_id": "do_not_imply_pricing_indirectly_with_phr_8fdedd",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_015",
+      "rule_id": "keep_it_under_120_words_3162de",
+      "violated": true,
+      "reason": "Runs well past the 120-word cap.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_015",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_016",
+      "rule_id": "keep_the_tone_casual_and_conversational_2883c7",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_016",
+      "rule_id": "do_not_use_pricing_words_such_as_price_c_1461fe",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_016",
+      "rule_id": "do_not_imply_pricing_indirectly_with_phr_8fdedd",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_016",
+      "rule_id": "keep_it_under_120_words_3162de",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_016",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": true,
+      "reason": "Sign-off omits the company line.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_017",
+      "rule_id": "keep_the_tone_casual_and_conversational_2883c7",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_017",
+      "rule_id": "do_not_use_pricing_words_such_as_price_c_1461fe",
+      "violated": true,
+      "reason": "Uses the banned word 'cost'.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_017",
+      "rule_id": "do_not_imply_pricing_indirectly_with_phr_8fdedd",
+      "violated": true,
+      "reason": "Also implies pricing with 'cost-effective' and 'pays for itself'.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_017",
+      "rule_id": "keep_it_under_120_words_3162de",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_017",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_018",
+      "rule_id": "keep_the_tone_casual_and_conversational_2883c7",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_018",
+      "rule_id": "do_not_use_pricing_words_such_as_price_c_1461fe",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_018",
+      "rule_id": "do_not_imply_pricing_indirectly_with_phr_8fdedd",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_018",
+      "rule_id": "keep_it_under_120_words_3162de",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_018",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_019",
+      "rule_id": "keep_the_tone_casual_and_conversational_2883c7",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_019",
+      "rule_id": "do_not_use_pricing_words_such_as_price_c_1461fe",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_019",
+      "rule_id": "do_not_imply_pricing_indirectly_with_phr_8fdedd",
+      "violated": true,
+      "reason": "Reads like implied pricing, though it only claims time saved.",
+      "kind": "semantic",
+      "confidence": "low",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_019",
+      "rule_id": "keep_it_under_120_words_3162de",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_019",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_020",
+      "rule_id": "keep_the_tone_casual_and_conversational_2883c7",
+      "violated": true,
+      "reason": "Corporate, stiff tone throughout.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_020",
+      "rule_id": "do_not_use_pricing_words_such_as_price_c_1461fe",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_020",
+      "rule_id": "do_not_imply_pricing_indirectly_with_phr_8fdedd",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_020",
+      "rule_id": "keep_it_under_120_words_3162de",
+      "violated": true,
+      "reason": "Exceeds the 120-word cap.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_020",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_021",
+      "rule_id": "keep_the_whole_email_under_500_character_c4d6df",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_021",
+      "rule_id": "reference_the_recipient_s_company_by_nam_b9af4e",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_021",
+      "rule_id": "reference_something_specific_and_verifia_70ff1d",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_021",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_021",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_022",
+      "rule_id": "keep_the_whole_email_under_500_character_c4d6df",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_022",
+      "rule_id": "reference_the_recipient_s_company_by_nam_b9af4e",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_022",
+      "rule_id": "reference_something_specific_and_verifia_70ff1d",
+      "violated": true,
+      "reason": "Names the company but says nothing specific or verifiable.",
+      "kind": "semantic",
+      "confidence": "low",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_022",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_022",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_023",
+      "rule_id": "keep_the_whole_email_under_500_character_c4d6df",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_023",
+      "rule_id": "reference_the_recipient_s_company_by_nam_b9af4e",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_023",
+      "rule_id": "reference_something_specific_and_verifia_70ff1d",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_023",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_023",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_024",
+      "rule_id": "keep_the_whole_email_under_500_character_c4d6df",
+      "violated": true,
+      "reason": "Body exceeds the 500-character budget.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_024",
+      "rule_id": "reference_the_recipient_s_company_by_nam_b9af4e",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_024",
+      "rule_id": "reference_something_specific_and_verifia_70ff1d",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_024",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_024",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_025",
+      "rule_id": "keep_the_whole_email_under_500_character_c4d6df",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_025",
+      "rule_id": "reference_the_recipient_s_company_by_nam_b9af4e",
+      "violated": true,
+      "reason": "Never names the recipient company.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_025",
+      "rule_id": "reference_something_specific_and_verifia_70ff1d",
+      "violated": true,
+      "reason": "No specific or verifiable detail about them.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_025",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_025",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_026",
+      "rule_id": "keep_the_whole_email_under_500_character_c4d6df",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_026",
+      "rule_id": "reference_the_recipient_s_company_by_nam_b9af4e",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_026",
+      "rule_id": "reference_something_specific_and_verifia_70ff1d",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_026",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": true,
+      "reason": "Uses an exclamation mark.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_026",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_027",
+      "rule_id": "keep_the_whole_email_under_500_character_c4d6df",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_027",
+      "rule_id": "reference_the_recipient_s_company_by_nam_b9af4e",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_027",
+      "rule_id": "reference_something_specific_and_verifia_70ff1d",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_027",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_027",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": true,
+      "reason": "Sign-off is missing the company line.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_028",
+      "rule_id": "keep_the_whole_email_under_500_character_c4d6df",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_028",
+      "rule_id": "reference_the_recipient_s_company_by_nam_b9af4e",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_028",
+      "rule_id": "reference_something_specific_and_verifia_70ff1d",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_028",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_028",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_029",
+      "rule_id": "keep_the_whole_email_under_500_character_c4d6df",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_029",
+      "rule_id": "reference_the_recipient_s_company_by_nam_b9af4e",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_029",
+      "rule_id": "reference_something_specific_and_verifia_70ff1d",
+      "violated": true,
+      "reason": "References 'recent growth' but nothing checkable.",
+      "kind": "semantic",
+      "confidence": "low",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_029",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_029",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_030",
+      "rule_id": "keep_the_whole_email_under_500_character_c4d6df",
+      "violated": true,
+      "reason": "Well over the 500-character budget.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_030",
+      "rule_id": "reference_the_recipient_s_company_by_nam_b9af4e",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_030",
+      "rule_id": "reference_something_specific_and_verifia_70ff1d",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_030",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": true,
+      "reason": "Uses exclamation marks.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_030",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_031",
+      "rule_id": "do_not_ask_any_questions_5e2d10",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_031",
+      "rule_id": "keep_the_tone_warm_and_casual_never_stif_7d76aa",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_031",
+      "rule_id": "keep_it_under_75_words_07f1e5",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_031",
+      "rule_id": "do_not_mention_pricing_or_discounts_eefdde",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_031",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_032",
+      "rule_id": "do_not_ask_any_questions_5e2d10",
+      "violated": true,
+      "reason": "Poses a question in rhetorical form without a question mark.",
+      "kind": "deterministic",
+      "confidence": "low",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_032",
+      "rule_id": "keep_the_tone_warm_and_casual_never_stif_7d76aa",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_032",
+      "rule_id": "keep_it_under_75_words_07f1e5",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_032",
+      "rule_id": "do_not_mention_pricing_or_discounts_eefdde",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_032",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_033",
+      "rule_id": "do_not_ask_any_questions_5e2d10",
+      "violated": true,
+      "reason": "Asks a direct question.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_033",
+      "rule_id": "keep_the_tone_warm_and_casual_never_stif_7d76aa",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_033",
+      "rule_id": "keep_it_under_75_words_07f1e5",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_033",
+      "rule_id": "do_not_mention_pricing_or_discounts_eefdde",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_033",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_034",
+      "rule_id": "do_not_ask_any_questions_5e2d10",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_034",
+      "rule_id": "keep_the_tone_warm_and_casual_never_stif_7d76aa",
+      "violated": true,
+      "reason": "Tone reads stiff and corporate rather than warm.",
+      "kind": "semantic",
+      "confidence": "low",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_034",
+      "rule_id": "keep_it_under_75_words_07f1e5",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_034",
+      "rule_id": "do_not_mention_pricing_or_discounts_eefdde",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_034",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_035",
+      "rule_id": "do_not_ask_any_questions_5e2d10",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_035",
+      "rule_id": "keep_the_tone_warm_and_casual_never_stif_7d76aa",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_035",
+      "rule_id": "keep_it_under_75_words_07f1e5",
+      "violated": true,
+      "reason": "Runs past the 75-word cap.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_035",
+      "rule_id": "do_not_mention_pricing_or_discounts_eefdde",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_035",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_036",
+      "rule_id": "do_not_ask_any_questions_5e2d10",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_036",
+      "rule_id": "keep_the_tone_warm_and_casual_never_stif_7d76aa",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_036",
+      "rule_id": "keep_it_under_75_words_07f1e5",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_036",
+      "rule_id": "do_not_mention_pricing_or_discounts_eefdde",
+      "violated": true,
+      "reason": "Mentions a discount.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_036",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_037",
+      "rule_id": "do_not_ask_any_questions_5e2d10",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_037",
+      "rule_id": "keep_the_tone_warm_and_casual_never_stif_7d76aa",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_037",
+      "rule_id": "keep_it_under_75_words_07f1e5",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_037",
+      "rule_id": "do_not_mention_pricing_or_discounts_eefdde",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_037",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": true,
+      "reason": "Sign-off omits the company name on its own line.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_038",
+      "rule_id": "do_not_ask_any_questions_5e2d10",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_038",
+      "rule_id": "keep_the_tone_warm_and_casual_never_stif_7d76aa",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_038",
+      "rule_id": "keep_it_under_75_words_07f1e5",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_038",
+      "rule_id": "do_not_mention_pricing_or_discounts_eefdde",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_038",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_039",
+      "rule_id": "do_not_ask_any_questions_5e2d10",
+      "violated": true,
+      "reason": "Asks a direct question.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_039",
+      "rule_id": "keep_the_tone_warm_and_casual_never_stif_7d76aa",
+      "violated": true,
+      "reason": "Stiff, corporate tone.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_039",
+      "rule_id": "keep_it_under_75_words_07f1e5",
+      "violated": true,
+      "reason": "Exceeds the 75-word cap.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_039",
+      "rule_id": "do_not_mention_pricing_or_discounts_eefdde",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_039",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_040",
+      "rule_id": "do_not_ask_any_questions_5e2d10",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_040",
+      "rule_id": "keep_the_tone_warm_and_casual_never_stif_7d76aa",
+      "violated": true,
+      "reason": "One phrase reads slightly formal, though overall warm.",
+      "kind": "semantic",
+      "confidence": "low",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_040",
+      "rule_id": "keep_it_under_75_words_07f1e5",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_040",
+      "rule_id": "do_not_mention_pricing_or_discounts_eefdde",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_040",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_041",
+      "rule_id": "never_use_exclamation_marks_46541b",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_041",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_041",
+      "rule_id": "keep_it_under_100_words_87fffe",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_041",
+      "rule_id": "reference_the_recipient_s_company_by_nam_2bc486",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_041",
+      "rule_id": "do_not_imply_pricing_without_stating_it_12cf31",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_041",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_042",
+      "rule_id": "never_use_exclamation_marks_46541b",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_042",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_042",
+      "rule_id": "keep_it_under_100_words_87fffe",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_042",
+      "rule_id": "reference_the_recipient_s_company_by_nam_2bc486",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_042",
+      "rule_id": "do_not_imply_pricing_without_stating_it_12cf31",
+      "violated": true,
+      "reason": "Implies pricing benefit with 'pays for itself'.",
+      "kind": "semantic",
+      "confidence": "low",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_042",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_043",
+      "rule_id": "never_use_exclamation_marks_46541b",
+      "violated": true,
+      "reason": "Uses an exclamation mark.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_043",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_043",
+      "rule_id": "keep_it_under_100_words_87fffe",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_043",
+      "rule_id": "reference_the_recipient_s_company_by_nam_2bc486",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_043",
+      "rule_id": "do_not_imply_pricing_without_stating_it_12cf31",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_043",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_044",
+      "rule_id": "never_use_exclamation_marks_46541b",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_044",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": true,
+      "reason": "Opens with a direct question.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_044",
+      "rule_id": "keep_it_under_100_words_87fffe",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_044",
+      "rule_id": "reference_the_recipient_s_company_by_nam_2bc486",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_044",
+      "rule_id": "do_not_imply_pricing_without_stating_it_12cf31",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_044",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_045",
+      "rule_id": "never_use_exclamation_marks_46541b",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_045",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_045",
+      "rule_id": "keep_it_under_100_words_87fffe",
+      "violated": true,
+      "reason": "Exceeds the 100-word cap.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_045",
+      "rule_id": "reference_the_recipient_s_company_by_nam_2bc486",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_045",
+      "rule_id": "do_not_imply_pricing_without_stating_it_12cf31",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_045",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_046",
+      "rule_id": "never_use_exclamation_marks_46541b",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_046",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_046",
+      "rule_id": "keep_it_under_100_words_87fffe",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_046",
+      "rule_id": "reference_the_recipient_s_company_by_nam_2bc486",
+      "violated": true,
+      "reason": "Never names the recipient company.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_046",
+      "rule_id": "do_not_imply_pricing_without_stating_it_12cf31",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_046",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_047",
+      "rule_id": "never_use_exclamation_marks_46541b",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_047",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_047",
+      "rule_id": "keep_it_under_100_words_87fffe",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_047",
+      "rule_id": "reference_the_recipient_s_company_by_nam_2bc486",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_047",
+      "rule_id": "do_not_imply_pricing_without_stating_it_12cf31",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_047",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": true,
+      "reason": "Sign-off omits the company line.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_048",
+      "rule_id": "never_use_exclamation_marks_46541b",
+      "violated": true,
+      "reason": "Uses exclamation marks.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_048",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_048",
+      "rule_id": "keep_it_under_100_words_87fffe",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_048",
+      "rule_id": "reference_the_recipient_s_company_by_nam_2bc486",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_048",
+      "rule_id": "do_not_imply_pricing_without_stating_it_12cf31",
+      "violated": true,
+      "reason": "Implies pricing with 'saves you money'.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_048",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_049",
+      "rule_id": "never_use_exclamation_marks_46541b",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_049",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_049",
+      "rule_id": "keep_it_under_100_words_87fffe",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_049",
+      "rule_id": "reference_the_recipient_s_company_by_nam_2bc486",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_049",
+      "rule_id": "do_not_imply_pricing_without_stating_it_12cf31",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_049",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_050",
+      "rule_id": "never_use_exclamation_marks_46541b",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_050",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_050",
+      "rule_id": "keep_it_under_100_words_87fffe",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_050",
+      "rule_id": "reference_the_recipient_s_company_by_nam_2bc486",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_050",
+      "rule_id": "do_not_imply_pricing_without_stating_it_12cf31",
+      "violated": true,
+      "reason": "Softly implies pricing with 'won't stretch your budget'.",
+      "kind": "semantic",
+      "confidence": "low",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_050",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "Reads clean on this instruction.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    }
+  ]
+}
