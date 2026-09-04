@@ -12,7 +12,8 @@ requires-python = ">=3.10"
 # on purpose. Downstream lanes are forbidden from editing this file, so anything
 # missing here becomes a merge conflict later. Be generous.
 dependencies = [
-    "anthropic>=0.40",     # the only model provider; wrapped by src/model_client.py
+    "anthropic>=0.40",     # optional provider; wrapped by src/model_client.py
+    "openai>=1.0",         # default provider; native strict structured output
     "pydantic>=2",         # available to any lane that wants schema validation beyond dataclasses
     "python-dotenv>=1",    # .env loading in src/config.py
     "rich>=13",            # optional pretty CLI output (Lane D)

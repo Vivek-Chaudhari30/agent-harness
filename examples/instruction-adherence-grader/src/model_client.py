@@ -3,8 +3,9 @@
 Four agents hammer one API key in parallel and the whole batch is re-run many
 times, so this module carries everything that makes that survivable:
 
-  * Structured output only. `call_json` uses a forced tool call and returns a dict.
-    Free-text JSON parsing is banned project-wide.
+  * Structured output only. `call_json` returns a parsed dict; OpenAI uses its
+    native strict-schema parser and Anthropic uses a forced tool call. Free-text
+    JSON parsing is banned project-wide.
   * A content-addressed disk cache keyed on the full request. temperature=0. A
     cache hit costs nothing and returns instantly, which is what makes re-running
     the batch free and reproducible across worktrees. Bypass with use_cache=False.
@@ -28,8 +29,11 @@ import os
 import random
 import threading
 import time
+from collections.abc import Callable
 from datetime import datetime, timezone
-from typing import Any, Callable
+from typing import Any, Literal
+
+from pydantic import BaseModel, ConfigDict, create_model
 
 from src.config import Config
 
@@ -50,13 +54,45 @@ _semaphore_size: int | None = None
 FakeResponder = Callable[[dict], dict]
 _fake_responder: FakeResponder | None = None
 
+# OpenAI models are checked against GET /v1/models before their first request.
+_verified_openai_models: set[str] = set()
+_verified_openai_models_lock = threading.Lock()
+_run_usage: dict[tuple[str, str], dict[str, int]] = {}
+_run_usage_lock = threading.Lock()
+
+
+class ModelRefusal(RuntimeError):
+    """Raised when a model explicitly declines a structured-output request."""
+
+
+class StrictSchemaError(ValueError):
+    """Raised before a non-strict JSON Schema can reach the OpenAI API."""
+
+
+Schema = dict[str, Any] | type[BaseModel]
+
+
+class _ProviderResponse:
+    """Parsed result plus facts that belong in the audit record, not its schema."""
+
+    def __init__(
+        self,
+        result: dict[str, Any],
+        *,
+        temperature_applied: bool = True,
+        usage: dict[str, int] | None = None,
+    ) -> None:
+        self.result = result
+        self.temperature_applied = temperature_applied
+        self.usage = usage
+
 
 # --------------------------------------------------------------------------- #
 # Public API
 # --------------------------------------------------------------------------- #
 def call_json(
     prompt: str,
-    schema: dict,
+    schema: Schema,
     *,
     model: str | None = None,
     system: str | None = None,
@@ -71,32 +107,49 @@ def call_json(
     required keys.
     """
     cfg = config or Config.from_env()
+    cfg.validate()
     model = model or cfg.model_name
     params = params or {}
+    schema_dict = _schema_dict(schema)
 
-    key = _cache_key(model, system, prompt, schema, params)
+    key = _cache_key(cfg.model_provider, model, system, prompt, schema_dict, params)
 
     if use_cache:
         cached = _cache_get(cfg, key)
         if cached is not None:
-            _debug_log(cfg, model, system, prompt, schema, cached, cache_hit=True)
+            _debug_log(
+                cfg, model, system, prompt, schema_dict, cached, cache_hit=True,
+                temperature_applied=True, usage=None,
+            )
             return cached
 
     if cfg.model_provider == "fake":
-        response = _fake_call(prompt, schema, model, system)
+        provider_response = _ProviderResponse(
+            _fake_call(prompt, schema_dict, model, system), usage=None
+        )
     elif cfg.model_provider == "anthropic":
-        response = _with_retries(
+        provider_response = _with_retries(
             cfg,
-            lambda: _anthropic_call(cfg, model, system, prompt, schema, params),
+            lambda: _anthropic_call(cfg, model, system, prompt, schema_dict, params),
+        )
+    elif cfg.model_provider == "openai":
+        provider_response = _with_retries(
+            cfg,
+            lambda: _openai_call(cfg, model, system, prompt, schema, params),
         )
     else:
         raise ValueError(f"unknown MODEL_PROVIDER: {cfg.model_provider!r}")
 
-    _validate_against_schema(response, schema)
+    response = provider_response.result
+    _validate_against_schema(response, schema_dict)
 
     if use_cache:
         _cache_put(cfg, key, response)
-    _debug_log(cfg, model, system, prompt, schema, response, cache_hit=False)
+    _debug_log(
+        cfg, model, system, prompt, schema_dict, response, cache_hit=False,
+        temperature_applied=provider_response.temperature_applied,
+        usage=provider_response.usage,
+    )
     return response
 
 
@@ -129,7 +182,7 @@ def _synthesize_from_schema(schema: dict) -> Any:
     """Build a minimal, deterministic, schema-valid value."""
     if "default" in schema:
         return schema["default"]
-    if "enum" in schema and schema["enum"]:
+    if schema.get("enum"):
         return schema["enum"][0]
     t = schema.get("type")
     if t == "object" or "properties" in schema:
@@ -151,16 +204,16 @@ def _synthesize_from_schema(schema: dict) -> Any:
 
 
 # --------------------------------------------------------------------------- #
-# Real provider (Anthropic), using a forced tool call for structured output.
+# Real providers
 # --------------------------------------------------------------------------- #
 def _anthropic_call(
     cfg: Config,
     model: str,
     system: str | None,
     prompt: str,
-    schema: dict,
+    schema: dict[str, Any],
     params: dict,
-) -> dict:
+) -> _ProviderResponse:
     import anthropic  # lazy: keeps the fake path fully offline
 
     if not cfg.api_key:
@@ -190,22 +243,184 @@ def _anthropic_call(
 
     for block in message.content:
         if getattr(block, "type", None) == "tool_use" and block.name == "emit_result":
-            return dict(block.input)
+            return _ProviderResponse(dict(block.input))
     raise RuntimeError("model returned no tool_use block; structured output failed")
 
 
-def _with_retries(cfg: Config, fn: Callable[[], dict]) -> dict:
-    import anthropic
+def _openai_call(
+    cfg: Config,
+    model: str,
+    system: str | None,
+    prompt: str,
+    schema: Schema,
+    params: dict,
+) -> _ProviderResponse:
+    """Make an OpenAI strict structured-output request without parsing text."""
+    import openai  # lazy: keeps the fake path fully offline
 
-    retryable = (
-        anthropic.RateLimitError,
-        anthropic.APIConnectionError,
-        anthropic.InternalServerError,
+    if not cfg.api_key:
+        raise RuntimeError(
+            "OPENAI_API_KEY is not set. Use MODEL_PROVIDER=fake for offline runs."
+        )
+
+    client = openai.OpenAI(api_key=cfg.api_key)
+    _verify_openai_model(client, model)
+    messages: list[dict[str, str]] = []
+    if system:
+        messages.append({"role": "system", "content": system})
+    messages.append({"role": "user", "content": prompt})
+    kwargs: dict[str, Any] = {
+        "model": model,
+        "messages": messages,
+        "response_format": _openai_response_format(schema),
+    }
+    if "max_tokens" in params:
+        kwargs["max_tokens"] = params["max_tokens"]
+
+    try:
+        completion = _openai_parse(client)(
+            **kwargs, temperature=cfg.temperature
+        )
+        temperature_applied = True
+    except openai.BadRequestError as exc:
+        if not _temperature_unsupported(exc):
+            raise
+        completion = _openai_parse(client)(**kwargs)
+        temperature_applied = False
+
+    msg = completion.choices[0].message
+    if getattr(msg, "refusal", None):
+        raise ModelRefusal(str(msg.refusal))
+    parsed = getattr(msg, "parsed", None)
+    if parsed is None:
+        raise RuntimeError("OpenAI returned neither a parsed result nor a refusal")
+    if isinstance(parsed, BaseModel):
+        result = parsed.model_dump(mode="json")
+    elif isinstance(parsed, dict):
+        result = parsed
+    else:
+        raise TypeError("OpenAI parsed result is not a JSON object")
+    return _ProviderResponse(
+        result,
+        temperature_applied=temperature_applied,
+        usage=_usage_dict(getattr(completion, "usage", None)),
     )
+
+
+def _openai_parse(client: Any) -> Callable[..., Any]:
+    """Use the SDK's native parsed-output helper across supported SDK versions."""
+    parse = getattr(client.chat.completions, "parse", None)
+    if parse is not None:
+        return parse
+    return client.beta.chat.completions.parse
+
+
+def _openai_response_format(schema: Schema) -> type[BaseModel]:
+    """Give the SDK a Pydantic model, including for a caller-provided JSON Schema.
+
+    The SDK converts this model to strict JSON Schema and returns ``message.parsed``.
+    This retains native structured output for dict callers without parsing content.
+    """
+    if isinstance(schema, type) and issubclass(schema, BaseModel):
+        return schema
+    assert isinstance(schema, dict)  # checked by _schema_dict before provider dispatch
+    return _pydantic_model_from_schema("StructuredResponse", schema)
+
+
+def _pydantic_model_from_schema(name: str, schema: dict[str, Any]) -> type[BaseModel]:
+    properties = schema.get("properties", {})
+    fields = {
+        field_name: (_pydantic_type(field_name.title(), field_schema), ...)
+        for field_name, field_schema in properties.items()
+    }
+    return create_model(name, __config__=ConfigDict(extra="forbid"), **fields)
+
+
+def _pydantic_type(name: str, schema: dict[str, Any]) -> Any:
+    if "enum" in schema:
+        return Literal.__getitem__(tuple(schema["enum"]))
+    schema_type = schema.get("type")
+    if schema_type == "string":
+        return str
+    if schema_type == "boolean":
+        return bool
+    if schema_type == "integer":
+        return int
+    if schema_type == "number":
+        return float
+    if schema_type == "array":
+        return list[_pydantic_type(f"{name}Item", schema.get("items", {}))]
+    if schema_type == "object" or "properties" in schema:
+        return _pydantic_model_from_schema(name, schema)
+    raise StrictSchemaError(
+        f"schema type {schema_type!r} cannot be represented as native structured output"
+    )
+
+
+def _verify_openai_model(client: Any, model: str) -> None:
+    """Fail before a batch begins when the configured OpenAI model is unavailable."""
+    with _verified_openai_models_lock:
+        if model in _verified_openai_models:
+            return
+        listed = client.models.list()  # GET /v1/models
+        records = getattr(listed, "data", listed)
+        available = {getattr(record, "id", None) for record in records}
+        if model not in available:
+            raise ValueError(
+                f"OpenAI model {model!r} is not served by GET /v1/models; "
+                "set MODEL_NAME to an available model."
+            )
+        _verified_openai_models.add(model)
+
+
+def _temperature_unsupported(exc: Exception) -> bool:
+    message = str(exc).lower()
+    return "temperature" in message and (
+        "unsupported" in message
+        or "not supported" in message
+        or "only the default" in message
+    )
+
+
+def _usage_dict(usage: Any) -> dict[str, int] | None:
+    if usage is None:
+        return None
+    raw = usage.model_dump() if hasattr(usage, "model_dump") else vars(usage)
+    result = {
+        name: int(value)
+        for name, value in raw.items()
+        if name in {"prompt_tokens", "completion_tokens", "total_tokens"}
+        and value is not None
+    }
+    return result or None
+
+
+def _with_retries(cfg: Config, fn: Callable[[], _ProviderResponse]) -> _ProviderResponse:
+    if cfg.model_provider == "anthropic":
+        import anthropic
+
+        retryable = (
+            anthropic.RateLimitError,
+            anthropic.APIConnectionError,
+            anthropic.InternalServerError,
+        )
+        status_error = anthropic.APIStatusError
+    elif cfg.model_provider == "openai":
+        import openai
+
+        retryable = (
+            openai.RateLimitError,
+            openai.APIConnectionError,
+            openai.InternalServerError,
+        )
+        status_error = openai.APIStatusError
+    else:
+        raise ValueError(f"unknown MODEL_PROVIDER: {cfg.model_provider!r}")
+
     for attempt in range(_MAX_RETRIES + 1):
         try:
             return fn()
-        except anthropic.APIStatusError as exc:  # includes 429 / 529 / 5xx
+        except status_error as exc:  # includes 429 / 529 / 5xx
             if exc.status_code not in (429, 500, 502, 503, 504, 529):
                 raise
             if attempt == _MAX_RETRIES:
@@ -250,10 +465,16 @@ class _SemaphoreGuard:
 # Content-addressed disk cache
 # --------------------------------------------------------------------------- #
 def _cache_key(
-    model: str, system: str | None, prompt: str, schema: dict, params: dict
+    provider: str,
+    model: str,
+    system: str | None,
+    prompt: str,
+    schema: dict,
+    params: dict,
 ) -> str:
     payload = json.dumps(
         {
+            "provider": provider,
             "model": model,
             "system": system or "",
             "prompt": prompt,
@@ -306,6 +527,8 @@ def _debug_log(
     response: dict,
     *,
     cache_hit: bool,
+    temperature_applied: bool,
+    usage: dict[str, int] | None,
 ) -> None:
     if not cfg.debug_log:
         return
@@ -314,6 +537,9 @@ def _debug_log(
         "provider": cfg.model_provider,
         "model": model,
         "cache_hit": cache_hit,
+        "temperature_applied": temperature_applied,
+        "usage": usage,
+        "run_usage": _record_usage(cfg.model_provider, model, usage),
         "system": system,
         "prompt": prompt,
         "schema": schema,
@@ -326,9 +552,57 @@ def _debug_log(
         fh.write(json.dumps(entry, ensure_ascii=False) + "\n")
 
 
+def _record_usage(
+    provider: str, model: str, usage: dict[str, int] | None
+) -> dict[str, int]:
+    """Keep a process-wide total in each call's audit record."""
+    with _run_usage_lock:
+        total = _run_usage.setdefault((provider, model), {})
+        if usage:
+            for name, value in usage.items():
+                total[name] = total.get(name, 0) + value
+        return dict(total)
+
+
 # --------------------------------------------------------------------------- #
 # Light response validation
 # --------------------------------------------------------------------------- #
+def _schema_dict(schema: Schema) -> dict[str, Any]:
+    """Normalize a Pydantic model class or reject a non-strict dict schema."""
+    if isinstance(schema, dict):
+        _validate_strict_schema(schema)
+        return schema
+    if isinstance(schema, type) and issubclass(schema, BaseModel):
+        return schema.model_json_schema()
+    raise TypeError("schema must be a JSON Schema dict or a Pydantic BaseModel class")
+
+
+def _validate_strict_schema(schema: dict[str, Any], where: str = "schema") -> None:
+    """Validate the subset OpenAI strict mode requires before making a call."""
+    if schema.get("type") == "object" or "properties" in schema:
+        properties = schema.get("properties")
+        if not isinstance(properties, dict):
+            raise StrictSchemaError(f"{where}: object schema must define properties")
+        if schema.get("additionalProperties") is not False:
+            raise StrictSchemaError(
+                f"{where}: strict schemas require additionalProperties: false"
+            )
+        required = schema.get("required")
+        if not isinstance(required, list) or set(required) != set(properties):
+            raise StrictSchemaError(
+                f"{where}: strict schemas require every property in required"
+            )
+        for name, child in properties.items():
+            if isinstance(child, dict):
+                _validate_strict_schema(child, f"{where}.properties[{name!r}]")
+    if isinstance(schema.get("items"), dict):
+        _validate_strict_schema(schema["items"], f"{where}.items")
+    for keyword in ("allOf", "anyOf", "oneOf"):
+        for index, child in enumerate(schema.get(keyword, [])):
+            if isinstance(child, dict):
+                _validate_strict_schema(child, f"{where}.{keyword}[{index}]")
+
+
 def _validate_against_schema(obj: Any, schema: dict) -> None:
     """Cheap structural check: required keys present. Not a full JSON Schema validator."""
     if schema.get("type") == "object" or "properties" in schema:
