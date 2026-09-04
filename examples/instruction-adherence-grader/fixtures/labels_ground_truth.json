@@ -1,0 +1,2712 @@
+{
+  "version": 1,
+  "provenance": {
+    "kind": "human_reviewed",
+    "model": "see config",
+    "labeler_prompt_sha": "pending",
+    "reviewed_at": "2026-09-04T17:43:39.723Z",
+    "reviewer_note": ""
+  },
+  "labels": [
+    {
+      "email_id": "em_001",
+      "rule_id": "never_mention_pricing_721fb9",
+      "violated": false,
+      "reason": "The email contains no pricing, cost, savings, ROI, or affordability language.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_001",
+      "rule_id": "keep_it_under_90_words_9d71ef",
+      "violated": true,
+      "reason": "The email body contains 91 words, exceeding the 90-word limit.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_001",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": true,
+      "reason": "It functionally asks for an assessment in “hear whether it maps to how your floor actually runs.”",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_001",
+      "rule_id": "always_reference_something_specific_abou_05b5e9",
+      "violated": false,
+      "reason": "It specifically references Acme Robotics’ second assembly line opening in Ohio.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_001",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "The email contains no exclamation mark character.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_001",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off lists “Dev” and “Flowstitch” on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_002",
+      "rule_id": "never_mention_pricing_721fb9",
+      "violated": false,
+      "reason": "The email contains no pricing or implied-cost language.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_002",
+      "rule_id": "keep_it_under_90_words_9d71ef",
+      "violated": true,
+      "reason": "The email body contains 99 words, exceeding the 90-word limit.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_002",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": true,
+      "reason": "“Hear whether it truly maps to how your floor actually runs” functions as a request for an answer in the first email.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_002",
+      "rule_id": "always_reference_something_specific_abou_05b5e9",
+      "violated": false,
+      "reason": "It specifically references Acme Robotics’ second assembly line opening in Ohio.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_002",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "The email contains no exclamation mark characters.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_002",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off has the first name “Dev” and company name “Flowstitch” on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_003",
+      "rule_id": "never_mention_pricing_721fb9",
+      "violated": false,
+      "reason": "The email contains no pricing or implied-cost language.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_003",
+      "rule_id": "keep_it_under_90_words_9d71ef",
+      "violated": false,
+      "reason": "The email body is 69 words including the greeting and signature, which is under 90.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_003",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": true,
+      "reason": "“You might be wondering how...” functions as a question in the first email.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_003",
+      "rule_id": "always_reference_something_specific_abou_05b5e9",
+      "violated": false,
+      "reason": "It specifically references the driver app Northwind Freight “rolled out this spring.”",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_003",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "The email contains no exclamation-mark character.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_003",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off places “Mara” and “Relaylane” on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_004",
+      "rule_id": "never_mention_pricing_721fb9",
+      "violated": true,
+      "reason": "It explicitly mentions pricing: \"Our pricing starts at a flat monthly rate.\"",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_004",
+      "rule_id": "keep_it_under_90_words_9d71ef",
+      "violated": false,
+      "reason": "The email body contains 63 words including the signature, which is under 90.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_004",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "The email contains no literal question mark or sentence functioning as a question.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_004",
+      "rule_id": "always_reference_something_specific_abou_05b5e9",
+      "violated": false,
+      "reason": "It references a specific company development: \"moving into refrigerated warehousing.\"",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_004",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "The email contains no exclamation mark characters.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_004",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off lists the first name \"Dev\" and company name \"Flowstitch\" on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_005",
+      "rule_id": "never_mention_pricing_721fb9",
+      "violated": false,
+      "reason": "The email contains no pricing, cost, savings, ROI, or budget language.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_005",
+      "rule_id": "keep_it_under_90_words_9d71ef",
+      "violated": false,
+      "reason": "The email body contains 56 words, which is under the 90-word limit.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_005",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "The email does not contain a question or a sentence functioning as a question.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_005",
+      "rule_id": "always_reference_something_specific_abou_05b5e9",
+      "violated": true,
+      "reason": "“Latham Manufacturing” is only a generic company name reference; no specific, verifiable company detail is cited.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_005",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": true,
+      "reason": "The email uses exclamation marks in “huge deal!” and “short version!”",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_005",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off places the first name “Dev” and company name “Flowstitch” on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_006",
+      "rule_id": "never_mention_pricing_721fb9",
+      "violated": false,
+      "reason": "The email contains no pricing, cost, savings, ROI, or budget language.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_006",
+      "rule_id": "keep_it_under_90_words_9d71ef",
+      "violated": false,
+      "reason": "The email body contains 61 words including the greeting and signature, which is under 90.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_006",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "The email contains no question mark or sentence that functions as a question.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_006",
+      "rule_id": "always_reference_something_specific_abou_05b5e9",
+      "violated": false,
+      "reason": "It references a specific company development: \"a new head of operations settling in.\"",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_006",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "The email contains no exclamation mark character.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_006",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": true,
+      "reason": "The sign-off is \"Thanks, Dev\" and does not include a company name on a separate line.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_007",
+      "rule_id": "never_mention_pricing_721fb9",
+      "violated": false,
+      "reason": "The email does not mention pricing, cost, budget, ROI, or affordability.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_007",
+      "rule_id": "keep_it_under_90_words_9d71ef",
+      "violated": false,
+      "reason": "The email body contains 58 words including the signature, which is under 90 words.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_007",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "The email contains no literal question mark or sentence functioning as a question.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_007",
+      "rule_id": "always_reference_something_specific_abou_05b5e9",
+      "violated": true,
+      "reason": "“Field service like Orchard Software” names the company but provides no specific, verifiable detail about it.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_007",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "The email contains no exclamation marks.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_007",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off places the first name “Dev” and company name “Flowstitch” on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_008",
+      "rule_id": "never_mention_pricing_721fb9",
+      "violated": true,
+      "reason": "It mentions pricing explicitly: \"runs $400 a month.\"",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_008",
+      "rule_id": "keep_it_under_90_words_9d71ef",
+      "violated": false,
+      "reason": "The email body, including the signature, is 38 words, which is under 90.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_008",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "The email contains no question or sentence functioning as a question.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_008",
+      "rule_id": "always_reference_something_specific_abou_05b5e9",
+      "violated": false,
+      "reason": "It references a specific company development: \"A second distribution hub\" and \"the expansion.\"",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_008",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": true,
+      "reason": "It uses exclamation marks in \"great problem to have!\" and \"expansion!\"",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_008",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off has the first name \"Dev\" and company name \"Flowstitch\" on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_009",
+      "rule_id": "never_mention_pricing_721fb9",
+      "violated": false,
+      "reason": "The email does not mention pricing, cost, budget, ROI, or savings.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_009",
+      "rule_id": "keep_it_under_90_words_9d71ef",
+      "violated": true,
+      "reason": "The email body contains 109 words including the signature, exceeding 90 words.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_009",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": true,
+      "reason": "It asks, “Would you be open to a quick call next week to see whether it fits how your operation runs today?”",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_009",
+      "rule_id": "always_reference_something_specific_abou_05b5e9",
+      "violated": true,
+      "reason": "It only refers generically to “distributors your size” and provides no specific, verifiable company reference.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_009",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "The email contains no exclamation mark characters.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_009",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off lists “Dev” and “Flowstitch” on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_010",
+      "rule_id": "never_mention_pricing_721fb9",
+      "violated": false,
+      "reason": "The email does not mention pricing or use implied-pricing language.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_010",
+      "rule_id": "keep_it_under_90_words_9d71ef",
+      "violated": false,
+      "reason": "The email body contains 67 words, including the greeting and signature.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_010",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "The email contains no literal or implied question.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_010",
+      "rule_id": "always_reference_something_specific_abou_05b5e9",
+      "violated": false,
+      "reason": "It specifically references Brightline Retail's same-day delivery pilot in Austin.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_010",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "The email contains no exclamation mark character.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_010",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off places the first name \"Dev\" and company name \"Flowstitch\" on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_011",
+      "rule_id": "keep_the_tone_casual_and_conversational_2883c7",
+      "violated": false,
+      "reason": "The overall register is casual and conversational, using phrases like “Quick one” and “No pressure either way.”",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_011",
+      "rule_id": "do_not_use_pricing_words_such_as_price_c_1461fe",
+      "violated": false,
+      "reason": "The email contains no pricing words such as “price,” “cost,” or “discount.”",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_011",
+      "rule_id": "do_not_imply_pricing_indirectly_with_phr_8fdedd",
+      "violated": false,
+      "reason": "The email does not make an indirect pricing or value-for-money claim such as ROI, savings, or “pays for itself.”",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_011",
+      "rule_id": "keep_it_under_120_words_3162de",
+      "violated": false,
+      "reason": "The email body is 72 words including the signature, which is under 120 words.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_011",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off puts the first name “Jonah” and company name “Deskweave” on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_012",
+      "rule_id": "keep_the_tone_casual_and_conversational_2883c7",
+      "violated": false,
+      "reason": "The overall register is casual and conversational, using phrasing like “Loved seeing” and “Want a peek.”",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_012",
+      "rule_id": "do_not_use_pricing_words_such_as_price_c_1461fe",
+      "violated": false,
+      "reason": "The email does not use the pricing words “price,” “cost,” or “discount.”",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_012",
+      "rule_id": "do_not_imply_pricing_indirectly_with_phr_8fdedd",
+      "violated": true,
+      "reason": "It implies financial value with “Our tool basically pays for itself within a quarter.”",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_012",
+      "rule_id": "keep_it_under_120_words_3162de",
+      "violated": false,
+      "reason": "The email body is 76 words, which is under the 120-word limit.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_012",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off uses the first name “Jonah” and company name “Deskweave” on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_013",
+      "rule_id": "keep_the_tone_casual_and_conversational_2883c7",
+      "violated": false,
+      "reason": "The overall register is casual and conversational, using phrases like \"Quick one\" and \"Want me to send a short clip.\"",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_013",
+      "rule_id": "do_not_use_pricing_words_such_as_price_c_1461fe",
+      "violated": true,
+      "reason": "It uses the pricing-related word \"cost\" in \"most of that cost is agents digging for answers.\"",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_013",
+      "rule_id": "do_not_imply_pricing_indirectly_with_phr_8fdedd",
+      "violated": true,
+      "reason": "\"Support at your volume gets expensive fast\" implies a financial burden indirectly.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_013",
+      "rule_id": "keep_it_under_120_words_3162de",
+      "violated": false,
+      "reason": "The email body is 52 words including the signature, which is under 120 words.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_013",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off has the first name \"Jonah\" and company name \"Deskweave\" on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_014",
+      "rule_id": "keep_the_tone_casual_and_conversational_2883c7",
+      "violated": true,
+      "reason": "The formal phrasing “align,” “leverage,” and “strategic priorities” gives the email a corporate register.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_014",
+      "rule_id": "do_not_use_pricing_words_such_as_price_c_1461fe",
+      "violated": false,
+      "reason": "The email contains none of the prohibited pricing words such as “price,” “cost,” or “discount.”",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_014",
+      "rule_id": "do_not_imply_pricing_indirectly_with_phr_8fdedd",
+      "violated": false,
+      "reason": "“Measurable efficiency” describes operational improvement but does not clearly imply pricing, savings, or ROI.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_014",
+      "rule_id": "keep_it_under_120_words_3162de",
+      "violated": false,
+      "reason": "The email body is 63 words including the signature, which is under 120 words.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_014",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off uses the first name “Jonah” and company name “Deskweave” on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_015",
+      "rule_id": "keep_the_tone_casual_and_conversational_2883c7",
+      "violated": false,
+      "reason": "The overall tone is conversational, using informal phrasing such as “Quick one” and “keep it real.”",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_015",
+      "rule_id": "do_not_use_pricing_words_such_as_price_c_1461fe",
+      "violated": false,
+      "reason": "The email does not use the words “price,” “cost,” or “discount.”",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_015",
+      "rule_id": "do_not_imply_pricing_indirectly_with_phr_8fdedd",
+      "violated": false,
+      "reason": "The email does not make an implied pricing claim such as ROI, savings, affordability, or paying for itself.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_015",
+      "rule_id": "keep_it_under_120_words_3162de",
+      "violated": true,
+      "reason": "The email body contains 157 words including the signature, exceeding the 120-word limit.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_015",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off places the first name “Jonah” and company name “Deskweave” on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_016",
+      "rule_id": "keep_the_tone_casual_and_conversational_2883c7",
+      "violated": false,
+      "reason": "The email uses a casual, conversational register, including “Quick one” and “Cheers.”",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_016",
+      "rule_id": "do_not_use_pricing_words_such_as_price_c_1461fe",
+      "violated": false,
+      "reason": "The email contains none of the prohibited pricing words: price, cost, or discount.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_016",
+      "rule_id": "do_not_imply_pricing_indirectly_with_phr_8fdedd",
+      "violated": false,
+      "reason": "The email does not make an indirect pricing or financial-return claim.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_016",
+      "rule_id": "keep_it_under_120_words_3162de",
+      "violated": false,
+      "reason": "The email body is 51 words including the signature, which is under 120 words.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_016",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": true,
+      "reason": "The sign-off includes the first name “Jonah” but does not include a company name on a separate line.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_017",
+      "rule_id": "keep_the_tone_casual_and_conversational_2883c7",
+      "violated": true,
+      "reason": "The overall register is corporate and salesy, with phrases like \"peak season,\" \"cost-effective,\" and \"live queue.\"",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_017",
+      "rule_id": "do_not_use_pricing_words_such_as_price_c_1461fe",
+      "violated": true,
+      "reason": "It uses the pricing words \"pricey\" and \"cost.\"",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_017",
+      "rule_id": "do_not_imply_pricing_indirectly_with_phr_8fdedd",
+      "violated": true,
+      "reason": "It explicitly says the tool is \"cost-effective\" and \"pays for itself fast.\"",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_017",
+      "rule_id": "keep_it_under_120_words_3162de",
+      "violated": false,
+      "reason": "The email body, including the signature, is 51 words, which is under 120.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_017",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off has the first name \"Jonah\" and company name \"Deskweave\" on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_018",
+      "rule_id": "keep_the_tone_casual_and_conversational_2883c7",
+      "violated": false,
+      "reason": "The overall tone is casual and conversational, using phrasing such as “Quick one” and “Totally fine if the timing is off.”",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_018",
+      "rule_id": "do_not_use_pricing_words_such_as_price_c_1461fe",
+      "violated": false,
+      "reason": "The email contains none of the prohibited pricing words such as “price,” “cost,” or “discount.”",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_018",
+      "rule_id": "do_not_imply_pricing_indirectly_with_phr_8fdedd",
+      "violated": false,
+      "reason": "The email makes no indirect pricing or value-for-money claim such as ROI, savings, or paying for itself.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_018",
+      "rule_id": "keep_it_under_120_words_3162de",
+      "violated": false,
+      "reason": "The email body, including the signature, is 68 words, which is under 120 words.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_018",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off lists the first name “Jonah” and company name “Deskweave” on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_019",
+      "rule_id": "keep_the_tone_casual_and_conversational_2883c7",
+      "violated": false,
+      "reason": "The overall tone is casual and conversational, using phrasing like “Quick one” and “Want a short clip.”",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_019",
+      "rule_id": "do_not_use_pricing_words_such_as_price_c_1461fe",
+      "violated": false,
+      "reason": "The email does not use pricing words such as “price,” “cost,” or “discount.”",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_019",
+      "rule_id": "do_not_imply_pricing_indirectly_with_phr_8fdedd",
+      "violated": false,
+      "reason": "“Saves the team hours” describes time savings, not an indirect claim about pricing, budget, or ROI.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_019",
+      "rule_id": "keep_it_under_120_words_3162de",
+      "violated": false,
+      "reason": "The email body contains 64 words including the signature, which is under 120 words.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_019",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off places the first name “Jonah” and company name “Deskweave” on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_020",
+      "rule_id": "keep_the_tone_casual_and_conversational_2883c7",
+      "violated": true,
+      "reason": "The overall register is corporate and formal, with phrases such as “your esteemed team” and “at your earliest convenience.”",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_020",
+      "rule_id": "do_not_use_pricing_words_such_as_price_c_1461fe",
+      "violated": false,
+      "reason": "The email does not use “price,” “cost,” “discount,” or other explicit pricing words.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_020",
+      "rule_id": "do_not_imply_pricing_indirectly_with_phr_8fdedd",
+      "violated": false,
+      "reason": "The email discusses operational efficiencies and value but does not make a clear money-saving, ROI, or affordability claim.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_020",
+      "rule_id": "keep_it_under_120_words_3162de",
+      "violated": true,
+      "reason": "The email body contains 123 words including the signature, exceeding the 120-word limit.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_020",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off places the first name “Jonah” and company name “Deskweave” on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_021",
+      "rule_id": "keep_the_whole_email_under_500_character_c4d6df",
+      "violated": false,
+      "reason": "The full email body, including the signature, is clearly under 500 characters.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_021",
+      "rule_id": "reference_the_recipient_s_company_by_nam_b9af4e",
+      "violated": false,
+      "reason": "The recipient company is named in the greeting: \"Hi Northwind Freight,\".",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_021",
+      "rule_id": "reference_something_specific_and_verifia_70ff1d",
+      "violated": false,
+      "reason": "It cites a specific, verifiable company event: opening the Columbus cross-dock in March.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_021",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "The email contains no exclamation mark character.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_021",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off places the first name \"Priya\" and company name \"Syncrail\" on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_022",
+      "rule_id": "keep_the_whole_email_under_500_character_c4d6df",
+      "violated": false,
+      "reason": "The full email body, including the signature, is under 500 characters.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_022",
+      "rule_id": "reference_the_recipient_s_company_by_nam_b9af4e",
+      "violated": false,
+      "reason": "It names the recipient company twice: \"Northwind Freight.\"",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_022",
+      "rule_id": "reference_something_specific_and_verifia_70ff1d",
+      "violated": true,
+      "reason": "The freight-growth pressures are generic industry filler and cite no specific, verifiable Northwind Freight detail.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_022",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "The email contains no literal exclamation mark character.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_022",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off places \"Priya\" and \"Syncrail\" on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_023",
+      "rule_id": "keep_the_whole_email_under_500_character_c4d6df",
+      "violated": false,
+      "reason": "The email body is 242 characters including the signature and line breaks, which is under 500.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_023",
+      "rule_id": "reference_the_recipient_s_company_by_nam_b9af4e",
+      "violated": false,
+      "reason": "It names the recipient company in the greeting: \"Hi Cobalt Data,\".",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_023",
+      "rule_id": "reference_something_specific_and_verifia_70ff1d",
+      "violated": false,
+      "reason": "It cites the specific, verifiable detail \"Your new API gateway launch.\"",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_023",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "The email contains no literal exclamation mark character.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_023",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The signature places \"Priya\" and \"Syncrail\" on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_024",
+      "rule_id": "keep_the_whole_email_under_500_character_c4d6df",
+      "violated": true,
+      "reason": "The email body exceeds the 500-character limit.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_024",
+      "rule_id": "reference_the_recipient_s_company_by_nam_b9af4e",
+      "violated": false,
+      "reason": "It names the recipient company in the greeting: \"Hi Brightpath Analytics,\".",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_024",
+      "rule_id": "reference_something_specific_and_verifia_70ff1d",
+      "violated": true,
+      "reason": "The claims about \"analytics vendors at your stage\" are generic and cite no verifiable Brightpath Analytics-specific fact.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_024",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "The email contains no exclamation mark character.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_024",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off places the first name \"Priya\" and company name \"Syncrail\" on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_025",
+      "rule_id": "keep_the_whole_email_under_500_character_c4d6df",
+      "violated": false,
+      "reason": "The full email body, including the signature, is under 500 characters.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_025",
+      "rule_id": "reference_the_recipient_s_company_by_nam_b9af4e",
+      "violated": true,
+      "reason": "The recipient's company name does not appear anywhere in the email.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_025",
+      "rule_id": "reference_something_specific_and_verifia_70ff1d",
+      "violated": true,
+      "reason": "“Payments companies” and “integration sprawl” are generic industry references, not a verifiable company-specific detail.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_025",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "The email contains no exclamation mark character.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_025",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off has “Priya” and “Syncrail” on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_026",
+      "rule_id": "keep_the_whole_email_under_500_character_c4d6df",
+      "violated": false,
+      "reason": "The full email body, including the signature, is under 500 characters.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_026",
+      "rule_id": "reference_the_recipient_s_company_by_nam_b9af4e",
+      "violated": false,
+      "reason": "The recipient company is named in the greeting: \"Hi Solstice Media,\".",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_026",
+      "rule_id": "reference_something_specific_and_verifia_70ff1d",
+      "violated": false,
+      "reason": "It references a specific company event: \"the CMS migration,\" which is verifiable.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_026",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": true,
+      "reason": "The email contains an exclamation mark in \"Congrats on the CMS migration!\".",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_026",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off places \"Priya\" and \"Syncrail\" on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_027",
+      "rule_id": "keep_the_whole_email_under_500_character_c4d6df",
+      "violated": false,
+      "reason": "The full email body, including the signature, is well under 500 characters.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_027",
+      "rule_id": "reference_the_recipient_s_company_by_nam_b9af4e",
+      "violated": false,
+      "reason": "The recipient company is named in the greeting: \"Hi Ironwood Manufacturing,\".",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_027",
+      "rule_id": "reference_something_specific_and_verifia_70ff1d",
+      "violated": true,
+      "reason": "\"Saw you adopted a new ERP\" is not verifiable as written because it gives no identifiable ERP, rollout, or other checkable company detail.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_027",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "The email contains no exclamation mark character.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_027",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": true,
+      "reason": "The sign-off includes only the first name \"Priya\" and no company name on a separate line.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_028",
+      "rule_id": "keep_the_whole_email_under_500_character_c4d6df",
+      "violated": false,
+      "reason": "The full email body, including the signature, is under 500 characters.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_028",
+      "rule_id": "reference_the_recipient_s_company_by_nam_b9af4e",
+      "violated": false,
+      "reason": "It names the recipient company in the greeting: \"Hi Lumen Robotics,\".",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_028",
+      "rule_id": "reference_something_specific_and_verifia_70ff1d",
+      "violated": false,
+      "reason": "It cites the specific, verifiable event \"the April Series B.\"",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_028",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "The email contains no exclamation mark character.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_028",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off places \"Priya\" and \"Syncrail\" on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_029",
+      "rule_id": "keep_the_whole_email_under_500_character_c4d6df",
+      "violated": false,
+      "reason": "The full email body, including the signature, is under 500 characters.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_029",
+      "rule_id": "reference_the_recipient_s_company_by_nam_b9af4e",
+      "violated": false,
+      "reason": "It names the recipient company in the greeting: \"Hi Fairfield Logistics,\".",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_029",
+      "rule_id": "reference_something_specific_and_verifia_70ff1d",
+      "violated": true,
+      "reason": "\"Your recent growth\" is a generic, unsupported claim and does not cite a specific verifiable company fact.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_029",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": false,
+      "reason": "The email contains no exclamation mark character.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_029",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off places \"Priya\" and \"Syncrail\" on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_030",
+      "rule_id": "keep_the_whole_email_under_500_character_c4d6df",
+      "violated": true,
+      "reason": "The email body is 600 characters including the signature, exceeding the 500-character limit.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_030",
+      "rule_id": "reference_the_recipient_s_company_by_nam_b9af4e",
+      "violated": false,
+      "reason": "It names the recipient company in the greeting: \"Hi Cedar Grove Foods,\".",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_030",
+      "rule_id": "reference_something_specific_and_verifia_70ff1d",
+      "violated": false,
+      "reason": "It references the company's specific, verifiable \"second production line.\"",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_030",
+      "rule_id": "no_exclamation_marks_df1778",
+      "violated": true,
+      "reason": "The body contains exclamation marks, including after \"celebrating!\" and \"shift!\".",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_030",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off has the first name \"Priya\" and company name \"Syncrail\" on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_031",
+      "rule_id": "do_not_ask_any_questions_5e2d10",
+      "violated": false,
+      "reason": "The email contains no question marks or sentences that function as questions.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_031",
+      "rule_id": "keep_the_tone_warm_and_casual_never_stif_7d76aa",
+      "violated": false,
+      "reason": "The overall tone is warm and conversational, with phrases such as \"I would love to show you.\"",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_031",
+      "rule_id": "keep_it_under_75_words_07f1e5",
+      "violated": false,
+      "reason": "The email body is 50 words including the signature, which is under 75 words.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_031",
+      "rule_id": "do_not_mention_pricing_or_discounts_eefdde",
+      "violated": false,
+      "reason": "The email does not mention pricing, discounts, savings, or affordability.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_031",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off places the first name \"Eli\" and company name \"Brightslot\" on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_032",
+      "rule_id": "do_not_ask_any_questions_5e2d10",
+      "violated": true,
+      "reason": "“You might be wondering how...” functions as a question, even without a question mark.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_032",
+      "rule_id": "keep_the_tone_warm_and_casual_never_stif_7d76aa",
+      "violated": false,
+      "reason": "The overall tone is conversational and friendly, with a casual greeting and warm sign-off.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_032",
+      "rule_id": "keep_it_under_75_words_07f1e5",
+      "violated": false,
+      "reason": "The email body contains 52 words, which is under 75 words.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_032",
+      "rule_id": "do_not_mention_pricing_or_discounts_eefdde",
+      "violated": false,
+      "reason": "The email does not mention pricing, discounts, savings, or implied affordability.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_032",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off lists the first name “Eli” and company name “Brightslot” on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_033",
+      "rule_id": "do_not_ask_any_questions_5e2d10",
+      "violated": true,
+      "reason": "It asks, “Would you have twenty minutes this week for a quick look?”",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_033",
+      "rule_id": "keep_the_tone_warm_and_casual_never_stif_7d76aa",
+      "violated": false,
+      "reason": "The overall tone is warm and conversational, with an approachable greeting and plain language.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_033",
+      "rule_id": "keep_it_under_75_words_07f1e5",
+      "violated": false,
+      "reason": "The email body contains 38 words including the signature, which is under 75.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_033",
+      "rule_id": "do_not_mention_pricing_or_discounts_eefdde",
+      "violated": false,
+      "reason": "It does not mention pricing, discounts, savings, or implied cost claims.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_033",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off has the first name “Eli” and company name “Brightslot” on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_034",
+      "rule_id": "do_not_ask_any_questions_5e2d10",
+      "violated": false,
+      "reason": "The email contains no literal or implied questions.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_034",
+      "rule_id": "keep_the_tone_warm_and_casual_never_stif_7d76aa",
+      "violated": true,
+      "reason": "Phrases such as “operational excellence” and “scheduling infrastructure” make the overall tone stiff and corporate.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_034",
+      "rule_id": "keep_it_under_75_words_07f1e5",
+      "violated": false,
+      "reason": "The email body contains 45 words, which is under 75.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_034",
+      "rule_id": "do_not_mention_pricing_or_discounts_eefdde",
+      "violated": false,
+      "reason": "The email does not mention pricing, discounts, savings, or affordability.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_034",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off places “Eli” and “Brightslot” on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_035",
+      "rule_id": "do_not_ask_any_questions_5e2d10",
+      "violated": false,
+      "reason": "The email contains no question marks or sentences that function as questions.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_035",
+      "rule_id": "keep_the_tone_warm_and_casual_never_stif_7d76aa",
+      "violated": false,
+      "reason": "The overall tone is warm and conversational, using phrases such as “off your plate” and “I would genuinely love.”",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_035",
+      "rule_id": "keep_it_under_75_words_07f1e5",
+      "violated": true,
+      "reason": "The email body contains 93 words including the signature, exceeding the 75-word limit.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_035",
+      "rule_id": "do_not_mention_pricing_or_discounts_eefdde",
+      "violated": false,
+      "reason": "The email does not mention pricing, discounts, savings, or affordability.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_035",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off places the first name “Eli” and company name “Brightslot” on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_036",
+      "rule_id": "do_not_ask_any_questions_5e2d10",
+      "violated": false,
+      "reason": "The email contains no literal or implied question.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_036",
+      "rule_id": "keep_the_tone_warm_and_casual_never_stif_7d76aa",
+      "violated": false,
+      "reason": "The overall tone is warm and conversational, using friendly phrasing such as “we love to solve.”",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_036",
+      "rule_id": "keep_it_under_75_words_07f1e5",
+      "violated": false,
+      "reason": "The email body is 52 words including the signature, which is under 75 words.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_036",
+      "rule_id": "do_not_mention_pricing_or_discounts_eefdde",
+      "violated": true,
+      "reason": "It mentions a discount: “there is a nice discount for boutique teams like yours right now.”",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_036",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off places the first name “Eli” and company name “Brightslot” on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_037",
+      "rule_id": "do_not_ask_any_questions_5e2d10",
+      "violated": false,
+      "reason": "The email contains no literal or implied question.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_037",
+      "rule_id": "keep_the_tone_warm_and_casual_never_stif_7d76aa",
+      "violated": false,
+      "reason": "The overall tone is warm and conversational, with phrases like “your guests feel looked after.”",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_037",
+      "rule_id": "keep_it_under_75_words_07f1e5",
+      "violated": false,
+      "reason": "The email body contains 46 words, which is under 75.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_037",
+      "rule_id": "do_not_mention_pricing_or_discounts_eefdde",
+      "violated": false,
+      "reason": "The email does not mention pricing, discounts, or implied cost savings.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_037",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": true,
+      "reason": "The sign-off says “Warmly, Eli” and does not include a company name on a separate line.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_038",
+      "rule_id": "do_not_ask_any_questions_5e2d10",
+      "violated": false,
+      "reason": "The email contains no question marks or sentences that function as questions.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_038",
+      "rule_id": "keep_the_tone_warm_and_casual_never_stif_7d76aa",
+      "violated": false,
+      "reason": "The overall tone is warm and conversational, using phrases like “a real juggle” and “the whole dance.”",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_038",
+      "rule_id": "keep_it_under_75_words_07f1e5",
+      "violated": false,
+      "reason": "The email body, including the signature, is 45 words, which is under 75.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_038",
+      "rule_id": "do_not_mention_pricing_or_discounts_eefdde",
+      "violated": false,
+      "reason": "The email does not mention pricing, discounts, savings, or implied cost claims.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_038",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off places the first name “Eli” and company name “Brightslot” on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_039",
+      "rule_id": "do_not_ask_any_questions_5e2d10",
+      "violated": true,
+      "reason": "It asks, “Would your firm be amenable to scheduling a formal introductory consultation...?”",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_039",
+      "rule_id": "keep_the_tone_warm_and_casual_never_stif_7d76aa",
+      "violated": true,
+      "reason": "The overall register is stiff and corporate, with phrases like “formally introduce” and “architected to optimize.”",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_039",
+      "rule_id": "keep_it_under_75_words_07f1e5",
+      "violated": false,
+      "reason": "The email body contains 73 words, including the signature, which is under 75.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_039",
+      "rule_id": "do_not_mention_pricing_or_discounts_eefdde",
+      "violated": false,
+      "reason": "It does not mention pricing, discounts, savings, or affordability.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_039",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off places “Eli” and “Brightslot” on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_040",
+      "rule_id": "do_not_ask_any_questions_5e2d10",
+      "violated": false,
+      "reason": "The email contains no question marks or sentences that function as questions.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_040",
+      "rule_id": "keep_the_tone_warm_and_casual_never_stif_7d76aa",
+      "violated": false,
+      "reason": "The overall tone is warm and approachable, with conversational phrasing such as “I would love to show you.”",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_040",
+      "rule_id": "keep_it_under_75_words_07f1e5",
+      "violated": false,
+      "reason": "The email body contains 55 words, including the signature, which is under 75 words.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_040",
+      "rule_id": "do_not_mention_pricing_or_discounts_eefdde",
+      "violated": false,
+      "reason": "The email does not mention pricing, discounts, savings, or implied cost claims.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_040",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off places the first name “Eli” and company name “Brightslot” on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_041",
+      "rule_id": "never_use_exclamation_marks_46541b",
+      "violated": false,
+      "reason": "The email contains no exclamation mark character.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_041",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "The email does not ask a question or contain a question-like sentence.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_041",
+      "rule_id": "keep_it_under_100_words_87fffe",
+      "violated": false,
+      "reason": "The email body is 59 words, which is under 100 words.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_041",
+      "rule_id": "reference_the_recipient_s_company_by_nam_2bc486",
+      "violated": false,
+      "reason": "The recipient's company is named as \"Portside Logistics.\"",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_041",
+      "rule_id": "do_not_imply_pricing_without_stating_it_12cf31",
+      "violated": false,
+      "reason": "The email describes operational efficiency but does not claim savings, affordability, ROI, or other pricing implications.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_041",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off places \"Tomas\" and \"Cleartrack\" on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_042",
+      "rule_id": "never_use_exclamation_marks_46541b",
+      "violated": false,
+      "reason": "The email contains no exclamation mark character.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_042",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "The email contains no literal or functional question.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_042",
+      "rule_id": "keep_it_under_100_words_87fffe",
+      "violated": false,
+      "reason": "The email body, including the signature, is under 100 words.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_042",
+      "rule_id": "reference_the_recipient_s_company_by_nam_2bc486",
+      "violated": false,
+      "reason": "The recipient company is named as \"Granite Freight.\"",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_042",
+      "rule_id": "do_not_imply_pricing_without_stating_it_12cf31",
+      "violated": true,
+      "reason": "It implies financial return without pricing by saying the platform \"pays for itself.\"",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_042",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off places \"Tomas\" and \"Cleartrack\" on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_043",
+      "rule_id": "never_use_exclamation_marks_46541b",
+      "violated": true,
+      "reason": "The sentence ending \"at once!\" contains an exclamation mark.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_043",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "The email contains no literal or functional question.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_043",
+      "rule_id": "keep_it_under_100_words_87fffe",
+      "violated": false,
+      "reason": "The email body, including the signature, is under 100 words.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_043",
+      "rule_id": "reference_the_recipient_s_company_by_nam_2bc486",
+      "violated": false,
+      "reason": "It explicitly names the recipient company as \"Summit Distribution.\"",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_043",
+      "rule_id": "do_not_imply_pricing_without_stating_it_12cf31",
+      "violated": false,
+      "reason": "It makes no pricing, savings, ROI, affordability, or cost-effectiveness claim.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_043",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off lists \"Tomas\" and \"Cleartrack\" on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_044",
+      "rule_id": "never_use_exclamation_marks_46541b",
+      "violated": false,
+      "reason": "The email contains no exclamation mark character.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_044",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": true,
+      "reason": "The opening sentence, “How much time does your dispatch team lose...,” functions as a question despite ending with a period.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_044",
+      "rule_id": "keep_it_under_100_words_87fffe",
+      "violated": false,
+      "reason": "The email body contains 53 words including the signature, which is under 100 words.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_044",
+      "rule_id": "reference_the_recipient_s_company_by_nam_2bc486",
+      "violated": false,
+      "reason": "The recipient’s company is named as “Beacon Freightways” in the greeting and body.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_044",
+      "rule_id": "do_not_imply_pricing_without_stating_it_12cf31",
+      "violated": false,
+      "reason": "The email does not use pricing or cost-savings language such as affordability, money saved, ROI, or payback.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_044",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off lists the first name “Tomas” and company name “Cleartrack” on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_045",
+      "rule_id": "never_use_exclamation_marks_46541b",
+      "violated": false,
+      "reason": "The email contains no exclamation mark character.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_045",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "The first email contains no question mark or sentence functioning as a question.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_045",
+      "rule_id": "keep_it_under_100_words_87fffe",
+      "violated": true,
+      "reason": "The email body is 113 words including the greeting and signature, exceeding 100 words.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_045",
+      "rule_id": "reference_the_recipient_s_company_by_nam_2bc486",
+      "violated": false,
+      "reason": "The recipient's company is named as \"Cardinal Supply\" in the greeting and body.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_045",
+      "rule_id": "do_not_imply_pricing_without_stating_it_12cf31",
+      "violated": false,
+      "reason": "The email describes operational consolidation but makes no pricing, savings, affordability, or ROI claim.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_045",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off places the first name \"Tomas\" and company name \"Cleartrack\" on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_046",
+      "rule_id": "never_use_exclamation_marks_46541b",
+      "violated": false,
+      "reason": "The email contains no exclamation mark character.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_046",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "The email contains no literal or implied question.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_046",
+      "rule_id": "keep_it_under_100_words_87fffe",
+      "violated": false,
+      "reason": "The email body contains 48 words including the signature, which is under 100.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_046",
+      "rule_id": "reference_the_recipient_s_company_by_nam_2bc486",
+      "violated": true,
+      "reason": "The email refers to \"your scale\" but does not name the recipient's company.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_046",
+      "rule_id": "do_not_imply_pricing_without_stating_it_12cf31",
+      "violated": false,
+      "reason": "The email does not mention pricing, savings, affordability, ROI, or similar cost claims.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_046",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off places \"Tomas\" and \"Cleartrack\" on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_047",
+      "rule_id": "never_use_exclamation_marks_46541b",
+      "violated": false,
+      "reason": "The email contains no exclamation mark character.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_047",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "The email contains no literal or functional question.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_047",
+      "rule_id": "keep_it_under_100_words_87fffe",
+      "violated": false,
+      "reason": "The email body contains 47 words, which is under 100.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_047",
+      "rule_id": "reference_the_recipient_s_company_by_nam_2bc486",
+      "violated": false,
+      "reason": "The recipient company is named twice as \"Monarch Transport.\"",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_047",
+      "rule_id": "do_not_imply_pricing_without_stating_it_12cf31",
+      "violated": false,
+      "reason": "The email does not state or imply pricing, savings, affordability, or ROI.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_047",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": true,
+      "reason": "The sign-off is \"Best regards, Tomas\" on one line and does not include a company name.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_048",
+      "rule_id": "never_use_exclamation_marks_46541b",
+      "violated": true,
+      "reason": "The email uses exclamation marks after \"right now!\" and \"reconciling!\".",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_048",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "The email contains no literal question mark or sentence functioning as a question.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_048",
+      "rule_id": "keep_it_under_100_words_87fffe",
+      "violated": false,
+      "reason": "The email body contains 52 words including the signature, which is under 100 words.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_048",
+      "rule_id": "reference_the_recipient_s_company_by_nam_2bc486",
+      "violated": false,
+      "reason": "The recipient's company name, \"Evergreen Freight,\" is referenced in the greeting and body.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_048",
+      "rule_id": "do_not_imply_pricing_without_stating_it_12cf31",
+      "violated": true,
+      "reason": "The phrase \"it saves you money almost immediately\" implies a financial benefit without stating pricing.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_048",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off places the first name \"Tomas\" and company name \"Cleartrack\" on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_049",
+      "rule_id": "never_use_exclamation_marks_46541b",
+      "violated": false,
+      "reason": "The email contains no exclamation mark character.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_049",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "The email contains no literal or implied question.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_049",
+      "rule_id": "keep_it_under_100_words_87fffe",
+      "violated": false,
+      "reason": "The email body contains 55 words, which is under 100.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_049",
+      "rule_id": "reference_the_recipient_s_company_by_nam_2bc486",
+      "violated": false,
+      "reason": "The recipient's company is named as \"Anchor Shipping.\"",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_049",
+      "rule_id": "do_not_imply_pricing_without_stating_it_12cf31",
+      "violated": false,
+      "reason": "The email does not mention pricing, savings, affordability, ROI, or similar cost implications.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_049",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off lists the first name \"Tomas\" and company name \"Cleartrack\" on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_050",
+      "rule_id": "never_use_exclamation_marks_46541b",
+      "violated": false,
+      "reason": "The email contains no exclamation mark character.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_050",
+      "rule_id": "do_not_ask_a_question_in_the_first_email_fc184c",
+      "violated": false,
+      "reason": "The email contains no literal or implied question.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_050",
+      "rule_id": "keep_it_under_100_words_87fffe",
+      "violated": false,
+      "reason": "The email body, including the signature, is under 100 words.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_050",
+      "rule_id": "reference_the_recipient_s_company_by_nam_2bc486",
+      "violated": false,
+      "reason": "The recipient company is explicitly named as \"Highland Distribution.\"",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_050",
+      "rule_id": "do_not_imply_pricing_without_stating_it_12cf31",
+      "violated": true,
+      "reason": "\"It will not stretch your budget\" implies pricing or affordability without stating a price.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    },
+    {
+      "email_id": "em_050",
+      "rule_id": "sign_off_with_a_first_name_and_company_n_0feddf",
+      "violated": false,
+      "reason": "The sign-off lists the first name \"Tomas\" and company name \"Cleartrack\" on separate lines.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": false,
+      "overturned": false
+    }
+  ]
+}

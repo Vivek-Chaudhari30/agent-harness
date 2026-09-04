@@ -71,6 +71,8 @@ def _cmd_label(args: argparse.Namespace) -> int:
     for rec in email_records:
         iset = iset_map[rec["instruction_set_id"]]
         labels = label_email(rec["body"], iset)
+        for lbl in labels:
+            lbl.email_id = rec["id"]   # labeler returns email_id="" per contract
         all_labels.extend(label_to_dict(lbl) for lbl in labels)
 
     out = {
