@@ -51,6 +51,33 @@ def build_review_sheet(emails_path: str, labels_path: str, out_path: str) -> str
     return out_path
 
 
+def run_review(
+    draft_path: str,
+    output_path: str,
+    *,
+    emails_path: str = "fixtures/emails.json",
+    limit: int | None = None,
+) -> None:
+    """Build the review sheet and open it in the default browser.
+
+    If the review sheet can't be opened automatically, prints the path.
+    `limit` is accepted for CLI compatibility but ignored (sheet includes all labels).
+    """
+    import webbrowser
+
+    sheet_path = os.path.join("runs", "review_sheet.html")
+    os.makedirs("runs", exist_ok=True)
+    out = build_review_sheet(emails_path, draft_path, sheet_path)
+    print(f"Review sheet written to {out}")
+    print(f"When finished, export the JSON from the sheet and run:")
+    print(f"  python -m src.cli review --ingest <exported.json> --output {output_path}")
+    try:
+        webbrowser.open(f"file://{os.path.abspath(out)}")
+        print("Opening in browser...")
+    except Exception:
+        print(f"Could not open browser. Open manually: {os.path.abspath(out)}")
+
+
 def ingest_reviewed(reviewed_path: str, out_path: str) -> dict:
     """Load a reviewer-exported JSON file and write labels_ground_truth.json.
 
