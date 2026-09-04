@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "provenance": {
+    "kind": "human_reviewed",
+    "model": "fake-model",
+    "labeler_prompt_sha": "abc123def456",
+    "reviewed_at": "2026-09-03T12:00:00Z",
+    "reviewer_note": "Synthetic test fixture for Lane D unit tests."
+  },
+  "labels": [
+    {
+      "email_id": "em_001",
+      "rule_id": "rule_det",
+      "violated": false,
+      "reason": "Compliant — word count within limit.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": true,
+      "overturned": false
+    },
+    {
+      "email_id": "em_001",
+      "rule_id": "rule_sem",
+      "violated": false,
+      "reason": "Compliant — specific company detail present.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": true,
+      "overturned": false
+    },
+    {
+      "email_id": "em_002",
+      "rule_id": "rule_det",
+      "violated": true,
+      "reason": "Word count exceeded the limit.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": true,
+      "overturned": false
+    },
+    {
+      "email_id": "em_002",
+      "rule_id": "rule_sem",
+      "violated": false,
+      "reason": "Compliant — specific detail included.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": true,
+      "overturned": false
+    },
+    {
+      "email_id": "em_003",
+      "rule_id": "rule_det",
+      "violated": false,
+      "reason": "Compliant.",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": true,
+      "overturned": false
+    },
+    {
+      "email_id": "em_003",
+      "rule_id": "rule_sem",
+      "violated": true,
+      "reason": "No specific company detail — only name-drops company.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": true,
+      "overturned": false
+    },
+    {
+      "email_id": "em_004",
+      "rule_id": "rule_det",
+      "violated": true,
+      "reason": "Actually violated — grader missed it (false negative test case).",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": true,
+      "overturned": false
+    },
+    {
+      "email_id": "em_004",
+      "rule_id": "rule_sem",
+      "violated": false,
+      "reason": "Compliant.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": true,
+      "overturned": false
+    },
+    {
+      "email_id": "em_005",
+      "rule_id": "rule_det",
+      "violated": false,
+      "reason": "Actually compliant — grader false alarm (false positive test case).",
+      "kind": "deterministic",
+      "confidence": "high",
+      "reviewed": true,
+      "overturned": true
+    },
+    {
+      "email_id": "em_005",
+      "rule_id": "rule_sem",
+      "violated": false,
+      "reason": "Compliant.",
+      "kind": "semantic",
+      "confidence": "high",
+      "reviewed": true,
+      "overturned": false
+    }
+  ]
+}
