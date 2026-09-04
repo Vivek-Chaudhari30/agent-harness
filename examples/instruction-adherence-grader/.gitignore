@@ -1,0 +1,19 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+
+# Model call cache and debug log
+.model_cache/
+
+# Grader run outputs are gitignored except the one final committed run.
+runs/*.json
+runs/*.metrics.json
+!runs/.gitkeep

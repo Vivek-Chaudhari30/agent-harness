@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "sets": [
+    {
+      "id": "is_01",
+      "label": "casual founder-led outbound, hard word cap",
+      "sender_persona": "founder at a small workflow-automation company",
+      "instructions": [
+        "Never mention pricing.",
+        "Keep it under 90 words.",
+        "Do not ask a question in the first email.",
+        "Always reference something specific about their company.",
+        "No exclamation marks.",
+        "Sign off with a first name and company name on separate lines."
+      ]
+    },
+    {
+      "id": "is_02",
+      "label": "casual tone, no pricing said or implied",
+      "sender_persona": "account executive at a customer-support tooling startup",
+      "instructions": [
+        "Keep the tone casual and conversational, never corporate.",
+        "Do not use pricing words such as price, cost, or discount.",
+        "Do not imply pricing indirectly with phrases like cost-effective, pays for itself, or ROI.",
+        "Keep it under 120 words.",
+        "Sign off with a first name and company name on separate lines."
+      ]
+    },
+    {
+      "id": "is_03",
+      "label": "tight character budget, verifiable company reference",
+      "sender_persona": "partnerships lead at a data-integration company",
+      "instructions": [
+        "Keep the whole email under 500 characters.",
+        "Reference the recipient's company by name at least once.",
+        "Reference something specific and verifiable about their company, not generic industry filler.",
+        "No exclamation marks.",
+        "Sign off with a first name and company name on separate lines."
+      ]
+    },
+    {
+      "id": "is_04",
+      "label": "warm and short, no questions, no pricing",
+      "sender_persona": "founder at a scheduling-software company",
+      "instructions": [
+        "Do not ask any questions.",
+        "Keep the tone warm and casual, never stiff or corporate.",
+        "Keep it under 75 words.",
+        "Do not mention pricing or discounts.",
+        "Sign off with a first name and company name on separate lines."
+      ]
+    },
+    {
+      "id": "is_05",
+      "label": "polished first-touch, no exclamations or questions",
+      "sender_persona": "sales lead at a logistics-analytics company",
+      "instructions": [
+        "Never use exclamation marks.",
+        "Do not ask a question in the first email.",
+        "Keep it under 100 words.",
+        "Reference the recipient's company by name.",
+        "Do not imply pricing without stating it, avoiding phrases like affordable, saves you money, or pays for itself.",
+        "Sign off with a first name and company name on separate lines."
+      ]
+    }
+  ]
+}

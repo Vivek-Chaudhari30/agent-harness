@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "instruction-adherence-grader"
+version = "0.1.0"
+description = "Grades whether an AI-written email obeyed the plain-English rules a customer set for it."
+requires-python = ">=3.10"
+
+# Every dependency the WHOLE project will ever need is declared here, in Phase 0,
+# on purpose. Downstream lanes are forbidden from editing this file, so anything
+# missing here becomes a merge conflict later. Be generous.
+dependencies = [
+    "anthropic>=0.40",     # the only model provider; wrapped by src/model_client.py
+    "pydantic>=2",         # available to any lane that wants schema validation beyond dataclasses
+    "python-dotenv>=1",    # .env loading in src/config.py
+    "rich>=13",            # optional pretty CLI output (Lane D)
+    "jinja2>=3",           # optional templating for the HTML review sheet (Lane C)
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "ruff>=0.6",
+]
+
+[project.scripts]
+grader = "src.cli:main"
+
+[tool.setuptools]
+packages = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-q"
