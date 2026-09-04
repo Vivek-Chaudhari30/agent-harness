@@ -54,13 +54,18 @@ The rules that made the merges cheap:
 ## Session record
 
 <!-- BEGIN GENERATED: scripts/session_report.py -->
-| Lane | Branch | Commits | First commit | Last commit | Span | Files touched | Net lines |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| _(generated)_ | | | | | | | |
-<!-- END GENERATED -->
+| Lane | Commits | First commit | Last commit | Span | Files touched | Net lines |
+| --- | --- | --- | --- | --- | --- | --- |
+| lane-a-compiler | 1 | 2026-09-04 06:11 UTC | 2026-09-04 06:11 UTC | 0m | 5 | +1408 |
+| lane-b-judge | 1 | 2026-09-04 06:08 UTC | 2026-09-04 06:08 UTC | 0m | 5 | +796 |
+| lane-c-fixtures | 1 | 2026-09-04 17:26 UTC | 2026-09-04 17:26 UTC | 0m | 7 | +5875 |
+| lane-d-scoring | 1 | 2026-09-04 06:09 UTC | 2026-09-04 06:09 UTC | 0m | 6 | +1185 |
+| phase-0-foundation | 6 | 2026-09-04 01:46 UTC | 2026-09-04 05:53 UTC | 4h 07m | 37 | +3726 |
+| phase-5-integration | 7 | 2026-09-04 17:29 UTC | 2026-09-04 17:47 UTC | 17m | 6 | +3211 |
+| unattributed | 2 | 2026-09-04 01:09 UTC | 2026-09-04 17:48 UTC | 16h 39m | 0 | +0 |
 
-**Overlap:** _(generated)_. The wall-clock window during which two or more lanes had commits in
-flight, versus the sum of their individual spans.
+**Overlap:** 4h 24m of concurrent activity across lanes. Sum of lane spans / wall clock = **1.26x**.
+<!-- END GENERATED -->
 
 ---
 
